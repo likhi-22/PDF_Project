@@ -1,0 +1,8 @@
+Django>=5.0
+djangorestframework
+mysqlclient
+django-cors-headers
+python-dotenv
+Pillow
+pypdf
+PyMuPDF

@@ -1,0 +1,24 @@
+INFO 2026-01-08 12:21:06,117 autoreload 3904 6232 Watching for file changes with StatReloader
+INFO 2026-01-08 12:21:20,160 autoreload 3904 6232 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
+INFO 2026-01-08 12:21:23,359 autoreload 14448 14216 Watching for file changes with StatReloader
+INFO 2026-01-08 12:23:00,391 autoreload 14448 14216 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
+INFO 2026-01-08 12:23:03,484 autoreload 17596 1524 Watching for file changes with StatReloader
+INFO 2026-01-08 12:24:24,728 autoreload 17596 1524 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\services.py changed, reloading.
+INFO 2026-01-08 12:24:27,544 autoreload 27792 24416 Watching for file changes with StatReloader
+INFO 2026-01-08 12:24:32,591 autoreload 27792 24416 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\core\settings\base.py changed, reloading.
+INFO 2026-01-08 12:24:35,313 autoreload 13436 2392 Watching for file changes with StatReloader
+INFO 2026-01-08 12:25:08,616 autoreload 13436 2392 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\services.py changed, reloading.
+INFO 2026-01-08 12:25:11,369 autoreload 644 28220 Watching for file changes with StatReloader
+INFO 2026-01-08 12:25:20,601 autoreload 644 28220 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\models.py changed, reloading.
+INFO 2026-01-08 12:25:23,545 autoreload 14928 28204 Watching for file changes with StatReloader
+INFO 2026-01-08 12:25:28,306 autoreload 14928 28204 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\models.py changed, reloading.
+INFO 2026-01-08 12:25:31,083 autoreload 8324 17676 Watching for file changes with StatReloader
+INFO 2026-01-08 12:25:49,367 autoreload 8324 17676 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
+INFO 2026-01-08 12:25:52,286 autoreload 9288 26488 Watching for file changes with StatReloader
+INFO 2026-01-08 12:25:58,335 autoreload 9288 26488 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\core\settings\base.py changed, reloading.
+INFO 2026-01-08 12:26:01,034 autoreload 24380 10464 Watching for file changes with StatReloader
+INFO 2026-01-08 12:26:05,026 autoreload 24380 10464 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\core\settings\base.py changed, reloading.
+INFO 2026-01-08 12:26:07,822 autoreload 16348 14512 Watching for file changes with StatReloader
+INFO 2026-01-08 12:26:12,750 autoreload 16348 14512 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\core\settings\base.py changed, reloading.
+INFO 2026-01-08 12:26:15,887 autoreload 28780 9592 Watching for file changes with StatReloader
+INFO 2026-01-08 12:27:01,251 autoreload 21340 28576 Watching for file changes with StatReloader
