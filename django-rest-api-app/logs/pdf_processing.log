@@ -1,0 +1,216 @@
+INFO 2026-01-08 12:21:06,117 autoreload 3904 6232 Watching for file changes with StatReloader
+INFO 2026-01-08 12:21:20,160 autoreload 3904 6232 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
+INFO 2026-01-08 12:21:23,359 autoreload 14448 14216 Watching for file changes with StatReloader
+INFO 2026-01-08 12:23:00,391 autoreload 14448 14216 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
+INFO 2026-01-08 12:23:03,484 autoreload 17596 1524 Watching for file changes with StatReloader
+INFO 2026-01-08 12:24:24,728 autoreload 17596 1524 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\services.py changed, reloading.
+INFO 2026-01-08 12:24:27,544 autoreload 27792 24416 Watching for file changes with StatReloader
+INFO 2026-01-08 12:24:32,591 autoreload 27792 24416 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\core\settings\base.py changed, reloading.
+INFO 2026-01-08 12:24:35,313 autoreload 13436 2392 Watching for file changes with StatReloader
+INFO 2026-01-08 12:25:08,616 autoreload 13436 2392 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\services.py changed, reloading.
+INFO 2026-01-08 12:25:11,369 autoreload 644 28220 Watching for file changes with StatReloader
+INFO 2026-01-08 12:25:20,601 autoreload 644 28220 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\models.py changed, reloading.
+INFO 2026-01-08 12:25:23,545 autoreload 14928 28204 Watching for file changes with StatReloader
+INFO 2026-01-08 12:25:28,306 autoreload 14928 28204 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\models.py changed, reloading.
+INFO 2026-01-08 12:25:31,083 autoreload 8324 17676 Watching for file changes with StatReloader
+INFO 2026-01-08 12:25:49,367 autoreload 8324 17676 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
+INFO 2026-01-08 12:25:52,286 autoreload 9288 26488 Watching for file changes with StatReloader
+INFO 2026-01-08 12:25:58,335 autoreload 9288 26488 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\core\settings\base.py changed, reloading.
+INFO 2026-01-08 12:26:01,034 autoreload 24380 10464 Watching for file changes with StatReloader
+INFO 2026-01-08 12:26:05,026 autoreload 24380 10464 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\core\settings\base.py changed, reloading.
+INFO 2026-01-08 12:26:07,822 autoreload 16348 14512 Watching for file changes with StatReloader
+INFO 2026-01-08 12:26:12,750 autoreload 16348 14512 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\core\settings\base.py changed, reloading.
+INFO 2026-01-08 12:26:15,887 autoreload 28780 9592 Watching for file changes with StatReloader
+INFO 2026-01-08 12:27:01,251 autoreload 21340 28576 Watching for file changes with StatReloader
+INFO 2026-01-10 14:49:08,391 autoreload 10080 31080 Watching for file changes with StatReloader
+WARNING 2026-01-10 14:49:14,578 log 10080 31172 Not Found: /favicon.ico
+INFO 2026-01-10 17:21:58,324 autoreload 7212 13948 Watching for file changes with StatReloader
+INFO 2026-01-13 14:23:50,417 autoreload 28648 23396 Watching for file changes with StatReloader
+WARNING 2026-01-13 14:23:58,380 log 28648 5324 Not Found: /favicon.ico
+INFO 2026-01-13 14:31:22,490 autoreload 28312 23684 Watching for file changes with StatReloader
+WARNING 2026-01-13 14:36:34,538 log 28312 22520 Bad Request: /api/documents/
+WARNING 2026-01-13 14:39:10,203 log 28312 9256 Bad Request: /api/documents/
+WARNING 2026-01-13 14:39:21,876 log 28312 9564 Bad Request: /api/documents/
+INFO 2026-01-13 14:40:32,054 autoreload 28312 23684 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\serializers.py changed, reloading.
+INFO 2026-01-13 14:40:35,659 autoreload 24732 2076 Watching for file changes with StatReloader
+INFO 2026-01-13 14:46:52,225 autoreload 26896 18900 Watching for file changes with StatReloader
+INFO 2026-01-13 14:50:19,726 autoreload 23316 19168 Watching for file changes with StatReloader
+INFO 2026-01-13 14:52:10,984 autoreload 25312 2316 Watching for file changes with StatReloader
+INFO 2026-01-13 14:53:30,936 autoreload 25440 18484 Watching for file changes with StatReloader
+INFO 2026-01-13 15:18:58,886 autoreload 28008 22340 Watching for file changes with StatReloader
+INFO 2026-01-13 15:19:30,449 views 28008 26864 Processing document upload: null.pdf
+INFO 2026-01-13 15:19:30,466 views 28008 26864 Extracted 42 pages from null.pdf
+INFO 2026-01-13 15:19:30,467 views 28008 26864 Document null.pdf size: 13570810 bytes
+INFO 2026-01-13 15:19:30,558 views 28008 26864 Document 4a36ca6c-6fda-44ff-8d9d-0c3cf7a0d93f saved successfully
+INFO 2026-01-13 15:20:03,460 views 28008 17104 Processing document upload: null.pdf
+INFO 2026-01-13 15:20:03,474 views 28008 17104 Extracted 42 pages from null.pdf
+INFO 2026-01-13 15:20:03,475 views 28008 17104 Document null.pdf size: 13570810 bytes
+INFO 2026-01-13 15:20:03,503 views 28008 17104 Document 1d442394-1dbd-4a0e-a1de-b99f925f8e46 saved successfully
+INFO 2026-01-13 15:21:03,890 views 28008 2140 Processing signature upload: College ID.jpg
+INFO 2026-01-13 15:21:03,907 views 28008 2140 Signature c50e9c41-bf28-4086-85c8-adb5705ecf03 saved successfully
+WARNING 2026-01-13 15:21:07,676 log 28008 2140 Bad Request: /api/signed-documents/
+INFO 2026-01-13 15:21:28,491 views 28008 25288 Processing signature upload: College ID.jpg
+INFO 2026-01-13 15:21:28,503 views 28008 25288 Signature 6db3f4dd-33c9-4b3c-a92c-2ca519a8ec2b saved successfully
+WARNING 2026-01-13 15:21:35,225 log 28008 22116 Bad Request: /api/signed-documents/
+INFO 2026-01-13 15:55:39,436 autoreload 11456 21820 Watching for file changes with StatReloader
+INFO 2026-01-13 17:03:39,845 autoreload 9380 21136 Watching for file changes with StatReloader
+INFO 2026-01-14 11:27:06,418 autoreload 21844 25136 Watching for file changes with StatReloader
+WARNING 2026-01-14 11:27:23,628 log 21844 19292 Not Found: /favicon.ico
+INFO 2026-01-14 12:03:12,166 views 21844 8148 Processing document upload: dev-example.pdf
+INFO 2026-01-14 12:03:12,324 views 21844 8148 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-14 12:03:12,327 views 21844 8148 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-14 12:03:12,511 views 21844 8148 Document 956a6517-d279-43db-92d0-c9dea4c3effd saved successfully
+INFO 2026-01-14 12:03:33,911 views 21844 14920 Processing signature upload: sign.jpg
+INFO 2026-01-14 12:03:33,937 views 21844 14920 Signature 8af2ac21-cd33-4d26-96c1-7825d3b1b813 saved successfully
+WARNING 2026-01-14 12:03:44,178 log 21844 14920 Bad Request: /api/signed-documents/
+WARNING 2026-01-14 12:03:51,467 log 21844 19364 Bad Request: /api/signed-documents/
+INFO 2026-01-14 12:11:48,222 views 21844 16800 Processing document upload: dev-example.pdf
+INFO 2026-01-14 12:11:48,292 views 21844 16800 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-14 12:11:48,293 views 21844 16800 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-14 12:11:48,412 views 21844 16800 Document 29e17294-6583-4eea-af8f-7127877fb4eb saved successfully
+INFO 2026-01-14 12:14:38,206 autoreload 21844 25136 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\serializers.py changed, reloading.
+INFO 2026-01-14 12:14:42,449 autoreload 19188 19952 Watching for file changes with StatReloader
+INFO 2026-01-14 12:21:34,722 views 19188 8040 Processing document upload: dev-example.pdf
+INFO 2026-01-14 12:21:34,803 views 19188 8040 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-14 12:21:34,804 views 19188 8040 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-14 12:21:34,902 views 19188 8040 Document 4ae57cb8-7af7-442a-8810-ec09afd8f67d saved successfully
+INFO 2026-01-14 12:21:48,722 views 19188 15172 Processing signature upload: sign.jpg
+INFO 2026-01-14 12:21:48,749 views 19188 15172 Signature 381d2364-8385-467a-9de8-3841aa3108e9 saved successfully
+INFO 2026-01-14 12:21:50,564 views 19188 15172 Starting PDF signing for document 4ae57cb8-7af7-442a-8810-ec09afd8f67d with signature 381d2364-8385-467a-9de8-3841aa3108e9
+INFO 2026-01-14 12:21:50,566 services 19188 15172 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\media\documents\dev-example_cxkKU6F.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\media\signatures\sign_S03pm2N.jpg
+INFO 2026-01-14 12:21:50,757 services 19188 15172 Opened PDF with 6 pages
+ERROR 2026-01-14 12:21:51,024 services 19188 15172 PDF signing failed: code=2: cannot remove file 'C:\Users\likhi\AppData\Local\Temp\tmpfe4mgunz.pdf': Permission denied
+ERROR 2026-01-14 12:21:52,197 log 19188 15172 Internal Server Error: /api/signed-documents/
+Traceback (most recent call last):
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\services.py", line 54, in sign_pdf
+    doc.save(tmp_file.name)
+    ~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\pymupdf\__init__.py", line 6544, in save
+    mupdf.pdf_save_document(pdf, filename, opts)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\pymupdf\mupdf.py", line 56040, in pdf_save_document
+    return _mupdf.pdf_save_document(doc, filename, opts)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+pymupdf.mupdf.FzErrorSystem: code=2: cannot remove file 'C:\Users\likhi\AppData\Local\Temp\tmpfe4mgunz.pdf': Permission denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py", line 62, in perform_create
+    signed_content = signing_service.sign_pdf(
+        original_document.get_file_path(),
+        signature.get_file_path()
+    )
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\services.py", line 66, in sign_pdf
+    raise ValidationError(f"Failed to sign PDF: {str(e)}")
+django.core.exceptions.ValidationError: ["Failed to sign PDF: code=2: cannot remove file 'C:\\Users\\likhi\\AppData\\Local\\Temp\\tmpfe4mgunz.pdf': Permission denied"]
+INFO 2026-01-14 12:23:14,203 views 19188 24552 Starting PDF signing for document 4ae57cb8-7af7-442a-8810-ec09afd8f67d with signature 381d2364-8385-467a-9de8-3841aa3108e9
+INFO 2026-01-14 12:23:14,218 services 19188 24552 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\media\documents\dev-example_cxkKU6F.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\media\signatures\sign_S03pm2N.jpg
+INFO 2026-01-14 12:23:14,287 services 19188 24552 Opened PDF with 6 pages
+ERROR 2026-01-14 12:23:14,748 services 19188 24552 PDF signing failed: code=2: cannot remove file 'C:\Users\likhi\AppData\Local\Temp\tmpkj8txtzu.pdf': Permission denied
+ERROR 2026-01-14 12:23:14,875 log 19188 24552 Internal Server Error: /api/signed-documents/
+Traceback (most recent call last):
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\services.py", line 54, in sign_pdf
+    doc.save(tmp_file.name)
+    ~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\pymupdf\__init__.py", line 6544, in save
+    mupdf.pdf_save_document(pdf, filename, opts)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\pymupdf\mupdf.py", line 56040, in pdf_save_document
+    return _mupdf.pdf_save_document(doc, filename, opts)
+           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+pymupdf.mupdf.FzErrorSystem: code=2: cannot remove file 'C:\Users\likhi\AppData\Local\Temp\tmpkj8txtzu.pdf': Permission denied
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\django\core\handlers\base.py", line 198, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\django\views\decorators\csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\venv\Lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py", line 62, in perform_create
+    signed_content = signing_service.sign_pdf(
+        original_document.get_file_path(),
+        signature.get_file_path()
+    )
+  File "C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\services.py", line 66, in sign_pdf
+    raise ValidationError(f"Failed to sign PDF: {str(e)}")
+django.core.exceptions.ValidationError: ["Failed to sign PDF: code=2: cannot remove file 'C:\\Users\\likhi\\AppData\\Local\\Temp\\tmpkj8txtzu.pdf': Permission denied"]
+INFO 2026-01-14 12:28:35,079 autoreload 19188 19952 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\services.py changed, reloading.
+INFO 2026-01-14 12:28:39,646 autoreload 20120 23664 Watching for file changes with StatReloader
+INFO 2026-01-14 12:30:19,449 views 20120 18160 Starting PDF signing for document 4ae57cb8-7af7-442a-8810-ec09afd8f67d with signature 381d2364-8385-467a-9de8-3841aa3108e9
+INFO 2026-01-14 12:30:19,453 services 20120 18160 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\media\documents\dev-example_cxkKU6F.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\media\signatures\sign_S03pm2N.jpg
+INFO 2026-01-14 12:30:19,516 services 20120 18160 Opened PDF with 6 pages
+INFO 2026-01-14 12:30:19,897 services 20120 18160 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-14 12:30:19,927 views 20120 18160 Signed document a91ab0c0-4dcd-4ff3-895b-3876f3958892 created successfully
+INFO 2026-01-14 12:45:25,156 views 20120 5936 Processing document upload: Pre trained models.pdf
+INFO 2026-01-14 12:45:25,510 views 20120 5936 Extracted 69 pages from Pre trained models.pdf
+INFO 2026-01-14 12:45:25,510 views 20120 5936 Document Pre trained models.pdf size: 3847743 bytes
+INFO 2026-01-14 12:45:25,615 views 20120 5936 Document c624a9bc-bb31-4d64-be58-273211d72c91 saved successfully
+INFO 2026-01-14 12:45:45,595 views 20120 13516 Processing signature upload: sign.jpg
+INFO 2026-01-14 12:45:45,618 views 20120 13516 Signature 6deb3ed6-ca05-4c72-b5f8-e7bd055187a5 saved successfully
+INFO 2026-01-14 12:45:55,104 views 20120 13516 Starting PDF signing for document c624a9bc-bb31-4d64-be58-273211d72c91 with signature 6deb3ed6-ca05-4c72-b5f8-e7bd055187a5
+INFO 2026-01-14 12:45:55,107 services 20120 13516 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\media\documents\Pre_trained_models.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\media\signatures\sign_KCZHUxy.jpg
+INFO 2026-01-14 12:45:55,548 services 20120 13516 Opened PDF with 69 pages
+INFO 2026-01-14 12:45:56,488 services 20120 13516 PDF signing completed successfully, output size: 4493125 bytes
+INFO 2026-01-14 12:45:56,515 views 20120 13516 Signed document 4a2d1658-d074-4ed0-a26b-558d4c344485 created successfully
+INFO 2026-01-14 14:02:21,560 views 20120 22452 Processing document upload: dev-example.pdf
+INFO 2026-01-14 14:02:21,697 views 20120 22452 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-14 14:02:21,698 views 20120 22452 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-14 14:02:21,818 views 20120 22452 Document 39073912-681d-4b7e-bc32-022d70a4e2fd saved successfully
+INFO 2026-01-14 14:02:57,522 views 20120 29356 Processing signature upload: sign.jpg
+INFO 2026-01-14 14:02:57,673 views 20120 29356 Signature 3a86fdc0-f15e-4131-9048-9a7723b8a563 saved successfully
+INFO 2026-01-14 14:03:11,227 views 20120 18732 Starting PDF signing for document 39073912-681d-4b7e-bc32-022d70a4e2fd with signature 3a86fdc0-f15e-4131-9048-9a7723b8a563
+INFO 2026-01-14 14:03:11,230 services 20120 18732 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\media\documents\dev-example_g4n4yeQ.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\media\signatures\sign_5D9d4Wp.jpg
+INFO 2026-01-14 14:03:11,335 services 20120 18732 Opened PDF with 6 pages
+INFO 2026-01-14 14:03:11,755 services 20120 18732 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-14 14:03:11,792 views 20120 18732 Signed document 2d65f0dc-2bef-4ef2-a790-3ca3f814d7cf created successfully
+INFO 2026-01-15 11:21:45,636 autoreload 19368 15272 Watching for file changes with StatReloader
+WARNING 2026-01-15 11:21:55,599 log 19368 23424 Not Found: /favicon.ico
+INFO 2026-01-15 11:38:04,660 autoreload 14888 28104 Watching for file changes with StatReloader
+INFO 2026-01-15 11:52:25,769 autoreload 14888 28104 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
+INFO 2026-01-15 11:52:30,299 autoreload 17940 21284 Watching for file changes with StatReloader
+INFO 2026-01-15 11:52:37,316 autoreload 17940 21284 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
+INFO 2026-01-15 11:52:42,094 autoreload 12392 8468 Watching for file changes with StatReloader
+INFO 2026-01-15 12:03:03,530 autoreload 12392 8468 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\services.py changed, reloading.
+INFO 2026-01-15 12:03:07,557 autoreload 7700 5220 Watching for file changes with StatReloader
+INFO 2026-01-15 12:03:11,352 autoreload 7700 5220 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
+INFO 2026-01-15 12:03:13,889 autoreload 19556 28752 Watching for file changes with StatReloader
