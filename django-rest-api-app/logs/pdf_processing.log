@@ -214,3 +214,7 @@ INFO 2026-01-15 12:03:03,530 autoreload 12392 8468 C:\Users\likhi\OneDrive\Deskt
 INFO 2026-01-15 12:03:07,557 autoreload 7700 5220 Watching for file changes with StatReloader
 INFO 2026-01-15 12:03:11,352 autoreload 7700 5220 C:\Users\likhi\OneDrive\Desktop\PDF-Project\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
 INFO 2026-01-15 12:03:13,889 autoreload 19556 28752 Watching for file changes with StatReloader
+INFO 2026-01-15 15:25:22,027 autoreload 4712 15400 Watching for file changes with StatReloader
+INFO 2026-01-15 15:28:42,822 autoreload 20256 19324 Watching for file changes with StatReloader
+WARNING 2026-01-15 15:28:53,394 log 20256 8500 Not Found: /favicon.ico
+INFO 2026-01-15 15:29:36,475 autoreload 22484 19432 Watching for file changes with StatReloader
