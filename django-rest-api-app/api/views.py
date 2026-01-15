@@ -1,7 +1,9 @@
 from rest_framework import viewsets, status
+from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
 from django.db import transaction
+from django.http import FileResponse
 from .models import Document, Signature, SignedDocument
 from .serializers import DocumentSerializer, SignatureSerializer, SignedDocumentSerializer
 from .services import PDFSigningService
@@ -59,9 +61,19 @@ class SignedDocumentViewSet(viewsets.ModelViewSet):
         with transaction.atomic():
             # Sign the PDF
             signing_service = PDFSigningService()
+            # Optional relative position (0..1) from top-left
+            position_x = self.request.data.get('position_x', None)
+            position_y = self.request.data.get('position_y', None)
+            position = None
+            try:
+                if position_x is not None and position_y is not None:
+                    position = (float(position_x), float(position_y))
+            except (TypeError, ValueError):
+                position = None
             signed_content = signing_service.sign_pdf(
                 original_document.get_file_path(),
-                signature.get_file_path()
+                signature.get_file_path(),
+                position=position
             )
 
             # Create the signed document
@@ -72,3 +84,14 @@ class SignedDocumentViewSet(viewsets.ModelViewSet):
 
             serializer.save(signed_pdf=signed_pdf_file)
             logger.info(f"Signed document {serializer.instance.id} created successfully")
+
+    @action(detail=True, methods=['get'])
+    def download(self, request, pk=None):
+        instance = self.get_object()
+        if not instance.signed_pdf:
+            return Response({'error': 'File not found'}, status=status.HTTP_404_NOT_FOUND)
+        
+        file_handle = instance.signed_pdf.open()
+        response = FileResponse(file_handle, content_type='application/pdf')
+        response['Content-Disposition'] = f'attachment; filename="signed_{instance.id}.pdf"'
+        return response

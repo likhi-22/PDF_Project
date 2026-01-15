@@ -1,7 +1,7 @@
 import os
 import tempfile
 import logging
-from typing import Optional
+from typing import Optional, Tuple
 from django.core.files.base import ContentFile
 from django.core.exceptions import ValidationError
 import fitz  # PyMuPDF
@@ -19,7 +19,7 @@ class PDFSigningService:
         self.signature_height = signature_height
         self.margin = margin
 
-    def sign_pdf(self, pdf_path: str, signature_path: str) -> bytes:
+    def sign_pdf(self, pdf_path: str, signature_path: str, position: Optional[Tuple[float, float]] = None) -> bytes:
         """
         Sign a PDF with a signature image on every page.
 
@@ -46,13 +46,13 @@ class PDFSigningService:
 
             # Process each page
             for page_num in range(total_pages):
-                self._sign_page(doc, page_num, signature_path)
+                self._sign_page(doc, page_num, signature_path, position)
                 logger.debug(f"Signed page {page_num + 1}/{total_pages}")
 
-            # Save to temporary file
-            with tempfile.NamedTemporaryFile(delete=False, suffix='.pdf') as tmp_file:
-                doc.save(tmp_file.name)
-                tmp_path = tmp_file.name
+            # Save to temporary file (ensure file is not held open on Windows)
+            fd, tmp_path = tempfile.mkstemp(suffix='.pdf')
+            os.close(fd)
+            doc.save(tmp_path)
 
             # Read the signed PDF content
             with open(tmp_path, 'rb') as f:
@@ -79,16 +79,29 @@ class PDFSigningService:
                 except Exception:
                     logger.warning("Failed to close PDF document")
 
-    def _sign_page(self, doc, page_num: int, signature_path: str) -> None:
+    def _sign_page(self, doc, page_num: int, signature_path: str, position: Optional[Tuple[float, float]] = None) -> None:
         """
         Sign a single page with the signature image.
         """
         page = doc.load_page(page_num)
         page_rect = page.rect
 
-        # Calculate position (bottom-right)
-        x = page_rect.width - self.signature_width - self.margin
-        y = page_rect.height - self.signature_height - self.margin
+        # Calculate position
+        if position is not None:
+            # position is relative (0..1) from top-left corner
+            x_rel, y_rel = position
+            # Clamp values
+            x_rel = max(0.0, min(1.0, x_rel))
+            y_rel = max(0.0, min(1.0, y_rel))
+            x = x_rel * page_rect.width
+            y = y_rel * page_rect.height
+            # Keep image fully in bounds
+            x = min(max(0, x), max(0, page_rect.width - self.signature_width))
+            y = min(max(0, y), max(0, page_rect.height - self.signature_height))
+        else:
+            # Default bottom-right with margin
+            x = page_rect.width - self.signature_width - self.margin
+            y = page_rect.height - self.signature_height - self.margin
 
         # Insert signature
         rect = fitz.Rect(x, y, x + self.signature_width, y + self.signature_height)
