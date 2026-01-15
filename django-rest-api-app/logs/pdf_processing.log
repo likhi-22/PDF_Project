@@ -218,3 +218,25 @@ INFO 2026-01-15 15:25:22,027 autoreload 4712 15400 Watching for file changes wit
 INFO 2026-01-15 15:28:42,822 autoreload 20256 19324 Watching for file changes with StatReloader
 WARNING 2026-01-15 15:28:53,394 log 20256 8500 Not Found: /favicon.ico
 INFO 2026-01-15 15:29:36,475 autoreload 22484 19432 Watching for file changes with StatReloader
+INFO 2026-01-15 15:33:24,080 views 22484 12748 Processing document upload: dev-example.pdf
+INFO 2026-01-15 15:33:24,106 views 22484 12748 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-15 15:33:24,106 views 22484 12748 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-15 15:33:24,130 views 22484 12748 Document 616f2850-fa00-41c7-b701-86fbe039a71d saved successfully
+INFO 2026-01-15 15:33:33,339 views 22484 21060 Processing signature upload: sign.jpg
+INFO 2026-01-15 15:33:33,352 views 22484 21060 Signature 06fdabc0-75c5-483a-9b8c-a71116e57280 saved successfully
+INFO 2026-01-15 15:33:38,214 views 22484 21060 Starting PDF signing for document 616f2850-fa00-41c7-b701-86fbe039a71d with signature 06fdabc0-75c5-483a-9b8c-a71116e57280
+INFO 2026-01-15 15:33:38,215 services 22484 21060 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_5oYh6vL.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_4iQLrYm.jpg
+INFO 2026-01-15 15:33:38,278 services 22484 21060 Opened PDF with 6 pages
+INFO 2026-01-15 15:33:38,426 services 22484 21060 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-15 15:33:38,437 views 22484 21060 Signed document 05dd909f-6b78-4dc1-a26a-20c0227e61f8 created successfully
+INFO 2026-01-15 15:35:04,306 views 22484 16840 Processing document upload: Likhitha Report PDF.pdf
+INFO 2026-01-15 15:35:04,322 views 22484 16840 Extracted 40 pages from Likhitha Report PDF.pdf
+INFO 2026-01-15 15:35:04,322 views 22484 16840 Document Likhitha Report PDF.pdf size: 2213166 bytes
+INFO 2026-01-15 15:35:04,338 views 22484 16840 Document 6a45b579-69d0-4e53-a259-212f133a8b8d saved successfully
+INFO 2026-01-15 15:35:17,959 views 22484 2744 Processing signature upload: sign.jpg
+INFO 2026-01-15 15:35:17,980 views 22484 2744 Signature 236c7097-6ddc-4c45-a4a4-0d050bbd8dda saved successfully
+INFO 2026-01-15 15:35:24,834 views 22484 7668 Starting PDF signing for document 6a45b579-69d0-4e53-a259-212f133a8b8d with signature 236c7097-6ddc-4c45-a4a4-0d050bbd8dda
+INFO 2026-01-15 15:35:24,834 services 22484 7668 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\Likhitha_Report_PDF.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_d7lhmTY.jpg
+INFO 2026-01-15 15:35:24,863 services 22484 7668 Opened PDF with 40 pages
+INFO 2026-01-15 15:35:25,050 services 22484 7668 PDF signing completed successfully, output size: 2731306 bytes
+INFO 2026-01-15 15:35:25,059 views 22484 7668 Signed document ea399723-c448-4ccd-9695-27a5a40d3b21 created successfully
