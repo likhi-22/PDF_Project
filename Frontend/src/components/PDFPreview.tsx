@@ -15,12 +15,24 @@ pdfjs.GlobalWorkerOptions.workerSrc = apiVersion
   ? `https://unpkg.com/pdfjs-dist@${apiVersion}/build/pdf.worker.min.mjs`
   : defaultWorkerSrc
 
+interface SignatureBox {
+  x: number
+  y: number
+  width: number
+  height: number
+}
+
 interface PDFPreviewProps {
   file: File | null
   signedPdfUrl?: string | null
   onError?: (error: Error) => void
   onPositionSelect?: (x: number, y: number) => void
   selectedPosition?: { x: number; y: number } | null
+  placementMode?: boolean
+  zoom?: number
+  signatureImageUrl?: string | null
+  signatureBox?: SignatureBox | null
+  onSignatureBoxChange?: (box: SignatureBox | null, options?: { pushHistory?: boolean }) => void
 }
 
 const PDFPreview = memo(function PDFPreview({
@@ -29,12 +41,24 @@ const PDFPreview = memo(function PDFPreview({
   onError,
   onPositionSelect,
   selectedPosition,
+  placementMode,
+  zoom,
+  signatureImageUrl,
+  signatureBox,
+  onSignatureBoxChange,
 }: PDFPreviewProps) {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)
   const [numPages, setNumPages] = useState<number | null>(null)
   const firstPageContainerRef = useRef<HTMLDivElement | null>(null)
+  const dragStateRef = useRef<{
+    mode: 'move' | 'resize' | null
+    pointerId: number | null
+    startX: number
+    startY: number
+    startBox: SignatureBox | null
+  } | null>(null)
 
   useEffect(() => {
     if (file && !signedPdfUrl) {
@@ -55,10 +79,14 @@ const PDFPreview = memo(function PDFPreview({
     } else if (signedPdfUrl) {
       setLoading(true)
       setError(null)
-      // If signedPdfUrl is a relative path, convert it to full URL
-      const fullUrl = signedPdfUrl.startsWith('http') 
-        ? signedPdfUrl 
-        : apiService.getMediaUrl(signedPdfUrl)
+      // If signedPdfUrl is a relative path, convert it to full URL.
+      // Blob URLs (blob:...) and absolute http(s) URLs are used as-is.
+      const fullUrl =
+        signedPdfUrl.startsWith('http://') ||
+        signedPdfUrl.startsWith('https://') ||
+        signedPdfUrl.startsWith('blob:')
+          ? signedPdfUrl
+          : apiService.getMediaUrl(signedPdfUrl)
       setPdfUrl(fullUrl)
       
       // Simulate loading for signed PDF
@@ -90,6 +118,124 @@ const PDFPreview = memo(function PDFPreview({
     firstPageContainerRef.current.style.setProperty('--marker-y', String(selectedPosition.y))
   }, [selectedPosition])
 
+  const clamp = (value: number, min: number, max: number) => {
+    if (value < min) return min
+    if (value > max) return max
+    return value
+  }
+
+  const handlePageClick = (event: React.MouseEvent<HTMLDivElement>) => {
+    if (!onPositionSelect && !(placementMode && onSignatureBoxChange)) {
+      return
+    }
+
+    const rect = event.currentTarget.getBoundingClientRect()
+    const x = (event.clientX - rect.left) / rect.width
+    const y = (event.clientY - rect.top) / rect.height
+
+    if (placementMode && onSignatureBoxChange) {
+      const defaultWidth = 0.25
+      const defaultHeight = 0.12
+      const boxX = clamp(x - defaultWidth / 2, 0, 1 - defaultWidth)
+      const boxY = clamp(y - defaultHeight / 2, 0, 1 - defaultHeight)
+
+      const box: SignatureBox = {
+        x: Number(boxX.toFixed(4)),
+        y: Number(boxY.toFixed(4)),
+        width: Number(defaultWidth.toFixed(4)),
+        height: Number(defaultHeight.toFixed(4)),
+      }
+
+      onSignatureBoxChange(box, { pushHistory: true })
+    }
+
+    if (onPositionSelect) {
+      onPositionSelect(Number(x.toFixed(4)), Number(y.toFixed(4)))
+    }
+  }
+
+  const handleSignaturePointerDown = (event: React.PointerEvent<HTMLDivElement>, mode: 'move' | 'resize') => {
+    if (!placementMode || !signatureBox || !firstPageContainerRef.current) {
+      return
+    }
+
+    event.stopPropagation()
+    event.preventDefault()
+
+    const pointerId = event.pointerId
+
+    dragStateRef.current = {
+      mode,
+      pointerId,
+      startX: event.clientX,
+      startY: event.clientY,
+      startBox: signatureBox,
+    }
+
+    event.currentTarget.setPointerCapture(pointerId)
+  }
+
+  const handleSignaturePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    const dragState = dragStateRef.current
+    if (!dragState || !dragState.mode || !dragState.startBox || !firstPageContainerRef.current || !onSignatureBoxChange) {
+      return
+    }
+
+    const rect = firstPageContainerRef.current.getBoundingClientRect()
+    const deltaX = (event.clientX - dragState.startX) / rect.width
+    const deltaY = (event.clientY - dragState.startY) / rect.height
+
+    const currentBox = dragState.startBox
+
+    if (dragState.mode === 'move') {
+      const x = clamp(currentBox.x + deltaX, 0, 1 - currentBox.width)
+      const y = clamp(currentBox.y + deltaY, 0, 1 - currentBox.height)
+
+      onSignatureBoxChange(
+        {
+          ...currentBox,
+          x,
+          y,
+        },
+        { pushHistory: false },
+      )
+    } else if (dragState.mode === 'resize') {
+      const minWidth = 0.05
+      const minHeight = 0.03
+
+      const width = clamp(currentBox.width + deltaX, minWidth, 1 - currentBox.x)
+      const height = clamp(currentBox.height + deltaY, minHeight, 1 - currentBox.y)
+
+      onSignatureBoxChange(
+        {
+          ...currentBox,
+          width,
+          height,
+        },
+        { pushHistory: false },
+      )
+    }
+  }
+
+  const handleSignaturePointerUp = (event: React.PointerEvent<HTMLDivElement>) => {
+    const dragState = dragStateRef.current
+    if (!dragState || !dragState.mode || !onSignatureBoxChange || !signatureBox) {
+      dragStateRef.current = null
+      return
+    }
+
+    if (dragState.pointerId !== null) {
+      try {
+        event.currentTarget.releasePointerCapture(dragState.pointerId)
+      } catch {
+        // Ignore if pointer capture is not set
+      }
+    }
+
+    onSignatureBoxChange(signatureBox, { pushHistory: true })
+    dragStateRef.current = null
+  }
+
   if (!file && !signedPdfUrl) {
     return (
       <Card variant="elevated" padding="lg" className="text-center min-h-[480px] flex items-center justify-center">
@@ -111,17 +257,10 @@ const PDFPreview = memo(function PDFPreview({
   const fileName = file?.name || 'Document.pdf'
   const displayFile = file || null
 
+  const effectiveZoom = zoom ?? 1
+
   // Source for react-pdf: File object for local, URL for signed
   const pdfSource = signedPdfUrl ? pdfUrl || signedPdfUrl : file || pdfUrl || undefined
-
-  const handlePageClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    if (!onPositionSelect) return
-
-    const rect = event.currentTarget.getBoundingClientRect()
-    const x = (event.clientX - rect.left) / rect.width
-    const y = (event.clientY - rect.top) / rect.height
-    onPositionSelect(Number(x.toFixed(4)), Number(y.toFixed(4)))
-  }
 
   return (
     <Card variant="elevated" padding="none" className="overflow-hidden">
@@ -226,27 +365,54 @@ const PDFPreview = memo(function PDFPreview({
                   loading={null}
                 >
                   <div className="space-y-4">
-                    {Array.from(new Array(numPages || 0), (_el, index) => (
+                    {Array.from(new Array(numPages || 0), (_el, index) => {
+                      const isFirstPage = index === 0
+                      return (
                       <div
                         key={`page_${index + 1}`}
-                        ref={index === 0 ? firstPageContainerRef : undefined}
+                        ref={isFirstPage ? firstPageContainerRef : undefined}
                         className="relative border border-slate-300 dark:border-secondary-700 rounded-md overflow-hidden bg-gray-50 dark:bg-secondary-900"
-                        onClick={index === 0 ? handlePageClick : undefined}
+                        onClick={isFirstPage ? handlePageClick : undefined}
                       >
                         <Page
                           pageNumber={index + 1}
-                          width={820}
+                          width={Math.round(820 * effectiveZoom)}
                           renderAnnotationLayer={false}
                           renderTextLayer={false}
                           loading=""
                         />
-                        {index === 0 && selectedPosition && (
+                        {signatureImageUrl && signatureBox && (
                           <div
-                            className="absolute w-3 h-3 rounded-full bg-sky-500 ring-2 ring-white/80 shadow-soft pdf-preview-marker"
-                          />
+                            className={isFirstPage ? 'absolute cursor-move' : 'absolute pointer-events-none'}
+                            style={{
+                              left: `${signatureBox.x * 100}%`,
+                              top: `${signatureBox.y * 100}%`,
+                              width: `${signatureBox.width * 100}%`,
+                              height: `${signatureBox.height * 100}%`,
+                            }}
+                            onPointerDown={isFirstPage ? (event) => handleSignaturePointerDown(event, 'move') : undefined}
+                            onPointerMove={isFirstPage ? handleSignaturePointerMove : undefined}
+                            onPointerUp={isFirstPage ? handleSignaturePointerUp : undefined}
+                          >
+                            <img
+                              src={signatureImageUrl}
+                              alt="Signature preview"
+                              className="h-full w-full select-none"
+                              draggable={false}
+                            />
+                            {isFirstPage && (
+                              <div
+                                className="absolute bottom-1 right-1 h-3 w-3 cursor-se-resize rounded-full bg-sky-500"
+                                onPointerDown={(event) => handleSignaturePointerDown(event, 'resize')}
+                              />
+                            )}
+                          </div>
+                        )}
+                        {isFirstPage && selectedPosition && !signatureBox && (
+                          <div className="absolute w-3 h-3 rounded-full bg-sky-500 ring-2 ring-white/80 shadow-soft pdf-preview-marker" />
                         )}
                       </div>
-                    ))}
+                    )})}
                   </div>
                 </Document>
               </div>

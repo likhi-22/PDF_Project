@@ -154,8 +154,8 @@ function PDFSigner() {
         }`}>
           {step === 'upload' && 'Upload PDF'}
           {step === 'preview' && 'Preview'}
-          {step === 'signature' && 'Add Signature'}
           {step === 'signing' && 'Sign PDF'}
+          {step === 'signature' && 'Add Signature'}
           {step === 'complete' && 'Complete'}
         </span>
         {stepIndex < steps.length - 1 && (

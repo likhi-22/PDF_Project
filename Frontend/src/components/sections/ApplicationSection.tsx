@@ -6,7 +6,8 @@ import PDFPreview from '../PDFPreview'
 import Button from '../ui/Button'
 import Card from '../ui/Card'
 import { useToast } from '../ToastProvider'
-import { apiService, ApiError, SignedDocument } from '../../services/api'
+import { ApiError } from '../../services/api'
+import { PDFDocument } from 'pdf-lib'
 
 type Step = 'upload' | 'signature' | 'preview' | 'signing' | 'complete'
 
@@ -20,45 +21,25 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
   const [uploadedSignature, setUploadedSignature] = useState<File | null>(null)
   const [documentId, setDocumentId] = useState<string | null>(null)
   const [signatureId, setSignatureId] = useState<string | null>(null)
-  const [signedDocument, setSignedDocument] = useState<SignedDocument | null>(null)
   const [signedPdfUrl, setSignedPdfUrl] = useState<string | null>(null)
+  const [signedBlob, setSignedBlob] = useState<Blob | null>(null)
   const [signingProgress, setSigningProgress] = useState(0)
   const [error, setError] = useState<string | null>(null)
   const [isSigning, setIsSigning] = useState(false)
   const [signaturePosition, setSignaturePosition] = useState<{ x: number; y: number } | null>(null)
-  const [history, setHistory] = useState<
-    { id: string; fileName: string; signedAt: string; signedPdf: string; fileSizeBytes?: number | null }[]
-  >([])
+  const [placementMode, setPlacementMode] = useState(false)
+  const [zoom, setZoom] = useState(1)
+  const [signaturePreviewUrl, setSignaturePreviewUrl] = useState<string | null>(null)
+  const [signatureBoxState, setSignatureBoxState] = useState<{
+    history: { x: number; y: number; width: number; height: number }[]
+    index: number
+  }>({ history: [], index: -1 })
+  const [hasSignedOnce, setHasSignedOnce] = useState(false)
   const signingProgressRef = useRef<HTMLDivElement | null>(null)
 
   const { showSuccess, showError, showLoading, dismiss } = useToast()
 
-  const formatFileSize = (bytes?: number | null) => {
-    if (!bytes || bytes <= 0) {
-      return '—'
-    }
-    const kb = bytes / 1024
-    if (kb < 1024) {
-      return `${kb.toFixed(1)} KB`
-    }
-    const mb = kb / 1024
-    return `${mb.toFixed(2)} MB`
-  }
-
-  // Load history from localStorage on mount
-  useEffect(() => {
-    try {
-      const stored = localStorage.getItem('pdf-signer-history')
-      if (stored) {
-        const parsed = JSON.parse(stored)
-        if (Array.isArray(parsed)) {
-          setHistory(parsed)
-        }
-      }
-    } catch {
-      // Ignore parse errors
-    }
-  }, [])
+  const autoSignTimeoutRef = useRef<number | null>(null)
 
   useEffect(() => {
     if (!signingProgressRef.current) {
@@ -69,11 +50,21 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
     signingProgressRef.current.style.setProperty('--signing-progress', String(progressValue))
   }, [signingProgress])
 
+  const currentSignatureBox = useMemo(() => {
+    if (signatureBoxState.index < 0) {
+      return null
+    }
+    return signatureBoxState.history[signatureBoxState.index] || null
+  }, [signatureBoxState])
+
   const handlePdfUpload = useCallback((file: File, docId: string) => {
     setUploadedPdf(file)
     setDocumentId(docId)
     setCurrentStep('signature')
     setError(null)
+    setSignedPdfUrl(null)
+    setSignedBlob(null)
+    setHasSignedOnce(false)
   }, [])
 
   const handleSignatureUpload = useCallback((file: File, sigId: string) => {
@@ -81,10 +72,97 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
     setSignatureId(sigId)
     setError(null)
     setCurrentStep('preview')
+    setSignatureBoxState({ history: [], index: -1 })
+    setSignaturePosition(null)
+    setPlacementMode(true)
+    setSignedPdfUrl(null)
+    setSignedBlob(null)
+    setHasSignedOnce(false)
+    if (signaturePreviewUrl) {
+      window.URL.revokeObjectURL(signaturePreviewUrl)
+    }
+    setSignaturePreviewUrl(window.URL.createObjectURL(file))
+    const defaultWidth = 0.25
+    const defaultHeight = 0.12
+    const defaultBox = {
+      x: Number(((1 - defaultWidth) / 2).toFixed(4)),
+      y: Number(((1 - defaultHeight) / 2).toFixed(4)),
+      width: Number(defaultWidth.toFixed(4)),
+      height: Number(defaultHeight.toFixed(4)),
+    }
+    setSignatureBoxState({ history: [defaultBox], index: 0 })
   }, [])
 
+  const updateSignatureBox = useCallback(
+    (box: { x: number; y: number; width: number; height: number } | null, pushHistory: boolean) => {
+      setSignatureBoxState((prev) => {
+        if (!box) {
+          return { history: [], index: -1 }
+        }
+
+        const normalizedBox = {
+          x: box.x,
+          y: box.y,
+          width: box.width,
+          height: box.height,
+        }
+
+        if (pushHistory) {
+          const truncated = prev.history.slice(0, prev.index + 1)
+          truncated.push(normalizedBox)
+          return {
+            history: truncated,
+            index: truncated.length - 1,
+          }
+        }
+
+        if (prev.history.length === 0 || prev.index < 0) {
+          return {
+            history: [normalizedBox],
+            index: 0,
+          }
+        }
+
+        const updated = [...prev.history]
+        updated[prev.index] = normalizedBox
+        return {
+          history: updated,
+          index: prev.index,
+        }
+      })
+
+      if (!box) {
+        setSignaturePosition(null)
+      } else {
+        setSignaturePosition({
+          x: box.x + box.width / 2,
+          y: box.y + box.height / 2,
+        })
+      }
+    },
+    [],
+  )
+
+  // Removed Add/Undo/Redo handlers per flow restructure
+
+  useEffect(() => {
+    const box = currentSignatureBox
+    if (!box) {
+      setSignaturePosition(null)
+      return
+    }
+
+    setSignaturePosition({
+      x: box.x + box.width / 2,
+      y: box.y + box.height / 2,
+    })
+  }, [currentSignatureBox])
+
   const handleSignPdf = useCallback(async () => {
-    if (!documentId || !signatureId || !uploadedSignature) {
+    if (hasSignedOnce) {
+      return
+    }
+    if (!documentId || !signatureId || !uploadedSignature || !uploadedPdf || !currentSignatureBox) {
       const errorMsg = 'Please upload both PDF and signature'
       setError(errorMsg)
       showError(errorMsg)
@@ -99,35 +177,49 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
     const loadingToastId = showLoading('Signing your PDF document... This may take a moment for large files.')
 
     try {
-      // Progress: preparing request
+      // Freeze current preview state as single source of truth
       setSigningProgress(10)
+      const pdfBytes = await uploadedPdf.arrayBuffer()
+      const sigBytes = await uploadedSignature.arrayBuffer()
+      const pdfDoc = await PDFDocument.load(pdfBytes)
+      const isPng = uploadedSignature.type.includes('png')
+      const sigImage = isPng ? await pdfDoc.embedPng(sigBytes) : await pdfDoc.embedJpg(sigBytes)
+      setSigningProgress(45)
 
-      // Call API to sign PDF with optional position
-      const positionPayload = signaturePosition ? { x: signaturePosition.x, y: signaturePosition.y } : undefined
-      const signedDoc = await apiService.signPDF(documentId, signatureId, positionPayload)
+      const box = currentSignatureBox
+      if (!box) {
+        throw new Error('Signature position is not set.')
+      }
 
-      setSigningProgress(70)
+      // Apply the same normalized box to all pages (synchronized)
+      const pages = pdfDoc.getPages()
+      for (const page of pages) {
+        const { width: pageWidth, height: pageHeight } = page.getSize()
+        const drawWidth = box.width * pageWidth
+        const drawHeight = box.height * pageHeight
+        const topY = box.y * pageHeight
+        const leftX = box.x * pageWidth
+        // Convert top-left (preview coords) to bottom-left (pdf-lib coords)
+        const drawX = leftX
+        const drawY = pageHeight - topY - drawHeight
+        page.drawImage(sigImage, {
+          x: drawX,
+          y: drawY,
+          width: drawWidth,
+          height: drawHeight,
+        })
+      }
 
-      // Download blob for preview
-      const blob = await apiService.downloadSignedDocumentBlob(signedDoc.id)
+      setSigningProgress(80)
+      const stampedBytes = await pdfDoc.save()
+      const buf = new ArrayBuffer(stampedBytes.byteLength)
+      const view = new Uint8Array(buf)
+      view.set(stampedBytes)
+      const blob = new Blob([buf], { type: 'application/pdf' })
       const pdfUrl = window.URL.createObjectURL(blob)
-      setSignedDocument(signedDoc)
+      setSignedBlob(blob)
       setSignedPdfUrl(pdfUrl)
       setSigningProgress(100)
-
-      // Update in-memory and persisted history
-      const entry = {
-        id: signedDoc.id,
-        fileName: uploadedPdf?.name || 'Document.pdf',
-        signedAt: signedDoc.signed_at || new Date().toISOString(),
-        signedPdf: signedDoc.signed_pdf,
-        fileSizeBytes: uploadedPdf?.size ?? null,
-      }
-      setHistory((prev) => {
-        const next = [entry, ...prev]
-        localStorage.setItem('pdf-signer-history', JSON.stringify(next))
-        return next
-      })
 
       dismiss(loadingToastId)
       showSuccess('PDF signed successfully! Ready for download.')
@@ -142,24 +234,27 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
     } finally {
       setIsSigning(false)
     }
-  }, [documentId, signatureId, uploadedSignature, uploadedPdf, showSuccess, showError, showLoading, dismiss])
+  }, [documentId, signatureId, uploadedSignature, uploadedPdf, showSuccess, showError, showLoading, dismiss, hasSignedOnce, currentSignatureBox])
+
+  const handleStampPdf = useCallback(() => {
+    if (!documentId || !signatureId || !uploadedSignature || !currentSignatureBox || isSigning || hasSignedOnce) {
+      return
+    }
+    if (autoSignTimeoutRef.current) {
+      clearTimeout(autoSignTimeoutRef.current)
+    }
+    void handleSignPdf()
+  }, [documentId, signatureId, uploadedSignature, currentSignatureBox, isSigning, hasSignedOnce, handleSignPdf])
 
   const handleDownload = useCallback(async () => {
-    if (!signedDocument || !uploadedPdf) {
+    if (!signedBlob || !uploadedPdf) {
       showError('No signed document available for download')
       return
     }
 
     const loadingToastId = showLoading('Preparing download...')
     try {
-      const blob = await apiService.downloadSignedDocumentBlob(signedDocument.id)
-
-      const pdfBlob = new Blob([blob], { type: 'application/pdf' })
-      if (pdfBlob.size === 0) {
-        throw new Error('Downloaded file is empty.')
-      }
-
-      const url = window.URL.createObjectURL(pdfBlob)
+      const url = window.URL.createObjectURL(signedBlob)
       const link = document.createElement('a')
       link.href = url
       link.download = `signed_${uploadedPdf.name || 'document.pdf'}`
@@ -176,25 +271,12 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
       const apiError = err as ApiError
       showError(apiError.message || 'Failed to download signed PDF. Please try again.')
     }
-  }, [signedDocument, uploadedPdf, showSuccess, showError, showLoading, dismiss])
+  }, [signedBlob, uploadedPdf, showSuccess, showError, showLoading, dismiss])
 
-  const resetFlow = useCallback(() => {
-    setCurrentStep('upload')
-    setUploadedPdf(null)
-    setUploadedSignature(null)
-    setDocumentId(null)
-    setSignatureId(null)
-    setSignedDocument(null)
-    setSignedPdfUrl(null)
-    setSigningProgress(0)
-    setError(null)
-    setIsSigning(false)
-  }, [])
+  // Removed resetFlow (unused)
 
   // Check if we can proceed to signing (also read uploadedSignature to satisfy linter)
-  const canSign = useMemo(() => {
-    return documentId !== null && signatureId !== null && uploadedSignature !== null && !isSigning
-  }, [documentId, signatureId, uploadedSignature, isSigning])
+  // Removed canSign (unused)
 
   const activeStepIndex = useMemo(() => {
     switch (currentStep) {
@@ -206,7 +288,7 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
         return 2
       case 'signing':
       case 'complete':
-        return 3
+        return 2
       default:
         return 0
     }
@@ -228,11 +310,6 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
         label: 'Preview',
         stepLabel: 'Step 3',
         isComplete: !!uploadedPdf && !!uploadedSignature,
-      },
-      {
-        label: 'Sign & download',
-        stepLabel: 'Step 4',
-        isComplete: currentStep === 'complete',
       },
     ],
     [currentStep, documentId, signatureId, uploadedPdf, uploadedSignature]
@@ -361,167 +438,67 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
                 <h3 className="text-lg font-semibold text-slate-50">Step 3 · Preview</h3>
                 <p className="text-sm text-slate-300">Review pages and pick the signature position on the first page.</p>
               </div>
+              <div className="mb-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+                <div className="flex flex-wrap gap-2" />
+                <div className="flex items-center gap-3">
+                  <span className="text-xs font-medium text-slate-300">Zoom</span>
+                  <input
+                    type="range"
+                    min={50}
+                    max={200}
+                    value={Math.round(zoom * 100)}
+                    onChange={(event) => {
+                      const value = Number(event.target.value) / 100
+                      setZoom(value)
+                    }}
+                    className="h-1 w-40 cursor-pointer rounded-full bg-slate-700 accent-sky-500"
+                    aria-label="Zoom PDF preview"
+                  />
+                </div>
+              </div>
               <div className="mx-auto w-full max-w-5xl">
                 <PDFPreview
                   file={uploadedPdf}
-                  signedPdfUrl={signedPdfUrl}
                   selectedPosition={signaturePosition}
                   onPositionSelect={(x, y) => {
                     setSignaturePosition({ x, y })
                   }}
+                  placementMode={placementMode}
+                  zoom={zoom}
+                  signatureImageUrl={signaturePreviewUrl}
+                  signatureBox={currentSignatureBox}
+                  onSignatureBoxChange={(box, options) => {
+                    updateSignatureBox(box, options?.pushHistory ?? true)
+                  }}
                 />
               </div>
+              <div className="mt-4 flex flex-wrap items-center gap-3">
+                <Button
+                  variant="primary"
+                  size="md"
+                  onClick={handleStampPdf}
+                  aria-label="Stamp PDF with current signature position"
+                  disabled={!uploadedPdf || !uploadedSignature || !currentSignatureBox || isSigning || hasSignedOnce}
+                >
+                  Stamp PDF
+                </Button>
+                <Button
+                  variant="outline"
+                  size="md"
+                  onClick={handleDownload}
+                  aria-label="Download signed PDF document"
+                  disabled={!signedPdfUrl}
+                >
+                  Download Signed PDF
+                </Button>
+              </div>
             </Card>
           </section>
 
-          <section
-            id="sign-and-download"
-            className={canSign || currentStep === 'signing' || currentStep === 'complete' ? 'transition-opacity' : 'pointer-events-none opacity-40 transition-opacity'}
-          >
-            <Card variant="elevated" padding="lg" className="w-full">
-              <div className="mb-4">
-                <h3 className="text-lg font-semibold text-slate-50">Step 4 · Sign & download</h3>
-                <p className="text-sm text-slate-300">Apply the signature to every page and download the signed PDF.</p>
-              </div>
-              <div className="space-y-3">
-                <p className="text-xs text-slate-400">
-                  Tip: Click the first page in preview to set signature position. That relative position is used for all pages.
-                </p>
-                {uploadedSignature && (
-                  <p className="text-xs text-slate-300">
-                    Signature: <span className="font-medium">{uploadedSignature.name}</span>
-                  </p>
-                )}
-                {currentStep === 'signing' && (
-                  <div className="mt-2">
-                    <div className="h-2 w-full rounded bg-slate-800">
-                      <div ref={signingProgressRef} className="signing-progress-bar h-2 rounded bg-sky-500 transition-all" />
-                    </div>
-                    <p className="mt-1 text-xs text-slate-400">
-                      Signing progress: {Math.min(100, Math.round(signingProgress))}%
-                    </p>
-                  </div>
-                )}
-                <div className="mt-4 grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  <Button
-                    variant="primary"
-                    onClick={handleSignPdf}
-                    disabled={!canSign || isSigning}
-                    isLoading={isSigning}
-                    fullWidth
-                    aria-label={canSign ? 'Sign PDF document' : 'Please upload PDF and signature to sign'}
-                  >
-                    {isSigning ? 'Signing...' : 'Sign PDF ✍️'}
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="md"
-                    onClick={handleDownload}
-                    fullWidth
-                    aria-label="Download signed PDF document"
-                    disabled={!signedDocument}
-                  >
-                    Download Signed PDF
-                  </Button>
-                </div>
-                <p className="text-xs text-slate-400">
-                  Status:{' '}
-                  <span className="font-medium">
-                    {currentStep === 'signing'
-                      ? 'In progress'
-                      : currentStep === 'complete'
-                      ? 'Completed'
-                      : canSign
-                      ? 'Ready to sign'
-                      : 'Waiting for uploads'}
-                  </span>
-                </p>
-                <div className="mt-2">
-                  <Button variant="ghost" size="md" onClick={resetFlow} aria-label="Start new signing session">
-                    New Signing Session
-                  </Button>
-                </div>
-              </div>
-            </Card>
-          </section>
+          {/* Step 4 removed per flow restructure */}
         </div>
 
-        <section id="history" className="mt-10">
-          <Card variant="elevated" padding="lg" className="w-full">
-            <div className="mb-4 flex items-center justify-between">
-              <div>
-                <h3 className="text-lg font-semibold text-slate-50">Signing History</h3>
-                <p className="text-sm text-slate-300">
-                  Recent documents signed in this session. Stored locally in your browser.
-                </p>
-              </div>
-              <div className="text-xs text-slate-400">
-                {history.length}{' '}
-                {history.length === 1 ? 'document' : 'documents'}
-              </div>
-            </div>
-
-            <div className="overflow-x-auto">
-              <table className="min-w-full text-left text-sm text-slate-200">
-                <thead className="border-b border-slate-800 text-xs uppercase tracking-wide text-slate-400">
-                  <tr>
-                    <th className="py-2 pr-4">File name</th>
-                    <th className="py-2 pr-4">Signed at</th>
-                    <th className="py-2 pr-4">Size</th>
-                    <th className="py-2 pr-4">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {history.length === 0 && (
-                    <tr>
-                      <td colSpan={3} className="py-6 text-center text-sm text-slate-400">
-                        No signed documents yet. Sign your first PDF to see it here.
-                      </td>
-                    </tr>
-                  )}
-                  {history.map((entry) => (
-                    <tr
-                      key={entry.id}
-                      className="border-b border-slate-800 last:border-b-0"
-                    >
-                      <td className="max-w-xs truncate py-3 pr-4">{entry.fileName}</td>
-                      <td className="py-3 pr-4 text-xs text-slate-400">
-                        {new Date(entry.signedAt).toLocaleString()}
-                      </td>
-                      <td className="py-3 pr-4 text-xs text-slate-400">
-                        {formatFileSize(entry.fileSizeBytes)}
-                      </td>
-                      <td className="py-3 pr-4">
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          onClick={async () => {
-                            try {
-                              const blob = await apiService.downloadSignedDocumentBlob(entry.id)
-                              const url = window.URL.createObjectURL(blob)
-                              const link = document.createElement('a')
-                              link.href = url
-                              link.download = `signed_${entry.fileName || 'document.pdf'}`
-                              document.body.appendChild(link)
-                              link.click()
-                              document.body.removeChild(link)
-                              window.URL.revokeObjectURL(url)
-                            } catch (err) {
-                              const apiError = err as ApiError
-                              showError(apiError.message || 'Failed to download signed PDF from history.')
-                            }
-                          }}
-                        >
-                          Download
-                        </Button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </Card>
-        </section>
+        {/* History section removed */}
       </div>
     </section>
   )

@@ -240,3 +240,433 @@ INFO 2026-01-15 15:35:24,834 services 22484 7668 Starting PDF signing: PDF=C:\Us
 INFO 2026-01-15 15:35:24,863 services 22484 7668 Opened PDF with 40 pages
 INFO 2026-01-15 15:35:25,050 services 22484 7668 PDF signing completed successfully, output size: 2731306 bytes
 INFO 2026-01-15 15:35:25,059 views 22484 7668 Signed document ea399723-c448-4ccd-9695-27a5a40d3b21 created successfully
+INFO 2026-01-15 17:39:13,531 autoreload 25748 25052 Watching for file changes with StatReloader
+INFO 2026-01-15 17:39:33,213 views 25748 25384 Processing document upload: Pre trained models.pdf
+INFO 2026-01-15 17:39:33,317 views 25748 25384 Extracted 69 pages from Pre trained models.pdf
+INFO 2026-01-15 17:39:33,317 views 25748 25384 Document Pre trained models.pdf size: 3847743 bytes
+INFO 2026-01-15 17:39:33,347 views 25748 25384 Document 26303d9b-2854-40b8-8598-219f1397e5c8 saved successfully
+INFO 2026-01-15 17:39:43,048 views 25748 11912 Processing signature upload: sign.jpg
+INFO 2026-01-15 17:39:43,065 views 25748 11912 Signature 9e21a002-cbb1-4b12-a61b-4738d177bd59 saved successfully
+INFO 2026-01-15 17:40:00,550 views 25748 9036 Starting PDF signing for document 26303d9b-2854-40b8-8598-219f1397e5c8 with signature 9e21a002-cbb1-4b12-a61b-4738d177bd59
+INFO 2026-01-15 17:40:00,550 services 25748 9036 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\Pre_trained_models_5W9S5wK.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_YGxsNsj.jpg
+INFO 2026-01-15 17:40:00,916 services 25748 9036 Opened PDF with 69 pages
+INFO 2026-01-15 17:40:01,762 services 25748 9036 PDF signing completed successfully, output size: 4493125 bytes
+INFO 2026-01-15 17:40:01,823 views 25748 9036 Signed document b62724ad-a55b-43ba-b0a6-5b79c7138904 created successfully
+INFO 2026-01-16 12:04:04,339 autoreload 26700 6792 Watching for file changes with StatReloader
+WARNING 2026-01-16 12:04:13,236 log 26700 20028 Not Found: /favicon.ico
+INFO 2026-01-16 12:05:18,813 views 26700 17852 Processing document upload: dev-example.pdf
+INFO 2026-01-16 12:05:18,840 views 26700 17852 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-16 12:05:18,841 views 26700 17852 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-16 12:05:18,868 views 26700 17852 Document d818aee5-fed9-4ae9-9c28-b70dce2f0e83 saved successfully
+INFO 2026-01-16 12:05:34,025 views 26700 22696 Processing signature upload: sign.jpg
+INFO 2026-01-16 12:05:34,044 views 26700 22696 Signature 18b0dcdb-1281-44ae-bbb6-f14e2e2c2d9a saved successfully
+INFO 2026-01-16 12:31:39,853 views 26700 408 Processing document upload: dev-example.pdf
+INFO 2026-01-16 12:31:39,917 views 26700 408 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-16 12:31:39,918 views 26700 408 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-16 12:31:39,988 views 26700 408 Document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 saved successfully
+INFO 2026-01-16 12:31:48,481 views 26700 408 Processing signature upload: sign.jpg
+INFO 2026-01-16 12:31:48,503 views 26700 408 Signature aba6a55e-b47e-4774-97cf-c61bb74d5c28 saved successfully
+INFO 2026-01-16 12:31:49,346 views 26700 408 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:31:49,348 services 26700 408 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:31:49,485 services 26700 408 Opened PDF with 6 pages
+INFO 2026-01-16 12:31:49,777 services 26700 408 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:31:49,800 views 26700 408 Signed document 9c1ad287-dc09-4e50-bdb3-bf688ef9ee21 created successfully
+INFO 2026-01-16 12:31:50,551 views 26700 408 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:31:50,551 services 26700 408 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:31:50,553 services 26700 408 Opened PDF with 6 pages
+INFO 2026-01-16 12:31:50,722 services 26700 408 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:31:50,737 views 26700 408 Signed document af47ede8-b57a-44d3-b149-5b88df501941 created successfully
+INFO 2026-01-16 12:31:51,653 views 26700 408 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:31:51,654 services 26700 408 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:31:51,656 services 26700 408 Opened PDF with 6 pages
+INFO 2026-01-16 12:31:51,874 services 26700 408 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:31:51,893 views 26700 408 Signed document 17cdebe0-0455-4cf7-8023-2a4622f077b2 created successfully
+INFO 2026-01-16 12:31:52,628 views 26700 408 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:31:52,629 services 26700 408 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:31:52,631 services 26700 408 Opened PDF with 6 pages
+INFO 2026-01-16 12:31:52,798 services 26700 408 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:31:52,815 views 26700 408 Signed document 8d215c1c-d1e1-4775-a315-3eeb6eb6c7fe created successfully
+INFO 2026-01-16 12:31:53,571 views 26700 408 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:31:53,572 services 26700 408 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:31:53,574 services 26700 408 Opened PDF with 6 pages
+INFO 2026-01-16 12:31:53,753 services 26700 408 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:31:53,772 views 26700 408 Signed document 1ca0840c-5abe-4675-b521-0f5f38816b38 created successfully
+INFO 2026-01-16 12:31:54,529 views 26700 408 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:31:54,530 services 26700 408 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:31:54,532 services 26700 408 Opened PDF with 6 pages
+INFO 2026-01-16 12:31:54,817 services 26700 408 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:31:54,846 views 26700 408 Signed document 4ef0a2ab-cc6b-4e3a-9d89-bb3d76811088 created successfully
+INFO 2026-01-16 12:31:55,719 views 26700 408 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:31:55,720 services 26700 408 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:31:55,725 services 26700 408 Opened PDF with 6 pages
+INFO 2026-01-16 12:31:56,150 services 26700 408 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:31:56,204 views 26700 408 Signed document 03307382-9ff9-4665-9fd3-26a63749a052 created successfully
+INFO 2026-01-16 12:32:00,697 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:00,698 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:00,703 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:01,034 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:01,090 views 26700 19900 Signed document bb0b07d7-fda8-468e-97cc-db6058831c0f created successfully
+INFO 2026-01-16 12:32:02,270 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:02,271 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:02,279 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:02,523 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:02,553 views 26700 19900 Signed document ca32f05b-2140-49e0-b2d9-3a173fa86345 created successfully
+INFO 2026-01-16 12:32:03,358 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:03,359 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:03,361 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:03,554 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:03,576 views 26700 19900 Signed document b57f2fe5-4512-48a2-b266-dfd138e3f53d created successfully
+INFO 2026-01-16 12:32:04,404 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:04,404 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:04,407 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:04,610 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:04,630 views 26700 19900 Signed document d6a310bd-ec92-4959-837c-a08c6728be3d created successfully
+INFO 2026-01-16 12:32:05,435 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:05,436 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:05,438 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:05,655 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:05,702 views 26700 19900 Signed document 5d4cf9df-4030-4bc0-9cf3-615746b21995 created successfully
+INFO 2026-01-16 12:32:06,534 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:06,534 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:06,537 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:06,772 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:06,813 views 26700 19900 Signed document 3bb36abc-3aef-4f5e-a6e1-af04ff8ab62a created successfully
+INFO 2026-01-16 12:32:07,666 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:07,667 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:07,671 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:07,966 services 26700 19900 PDF signing completed successfully, output size: 1207857 bytes
+INFO 2026-01-16 12:32:08,002 views 26700 19900 Signed document 9f8f3e81-70e7-4e41-a594-afcf87bef30a created successfully
+INFO 2026-01-16 12:32:08,853 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:08,853 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:08,857 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:09,151 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:09,224 views 26700 19900 Signed document 76c43ba4-a60d-4c0c-88c5-7d340fc3e81c created successfully
+INFO 2026-01-16 12:32:10,441 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:10,465 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:10,592 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:11,096 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:11,305 views 26700 19900 Signed document 6db85a57-f2ee-409d-9779-ab1087c6e373 created successfully
+INFO 2026-01-16 12:32:12,716 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:12,720 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:12,732 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:13,820 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:13,860 views 26700 19900 Signed document 3464f778-c51f-4a35-84aa-d10a343b709f created successfully
+INFO 2026-01-16 12:32:14,780 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:14,781 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:14,784 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:15,061 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:15,259 views 26700 19900 Signed document b178f561-09c6-4a15-9de5-8ee50a264b9b created successfully
+INFO 2026-01-16 12:32:16,791 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:16,795 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:16,799 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:17,163 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:17,199 views 26700 19900 Signed document 96a90ef5-db62-4818-8140-18401cbd3ceb created successfully
+INFO 2026-01-16 12:32:18,127 views 26700 19900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:18,128 services 26700 19900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:18,131 services 26700 19900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:18,567 services 26700 19900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:18,760 views 26700 19900 Signed document 63780297-53fa-4cf3-994f-d552b3ab370e created successfully
+INFO 2026-01-16 12:32:20,020 views 26700 18208 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:20,026 services 26700 18208 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:20,039 services 26700 18208 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:20,849 services 26700 18208 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:20,951 views 26700 18208 Signed document 7de6cd95-6165-4fa2-9310-aa2f85356779 created successfully
+INFO 2026-01-16 12:32:21,982 views 26700 18208 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:21,984 services 26700 18208 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:21,997 services 26700 18208 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:22,316 services 26700 18208 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:22,344 views 26700 18208 Signed document 262bf361-c60d-41ef-8c67-bc396f2404dd created successfully
+INFO 2026-01-16 12:32:23,222 views 26700 18208 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:23,223 services 26700 18208 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:23,226 services 26700 18208 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:23,549 services 26700 18208 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:23,613 views 26700 18208 Signed document f5396eaa-227f-4fa5-979f-c7859f2611c8 created successfully
+INFO 2026-01-16 12:32:24,803 views 26700 18208 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:24,804 services 26700 18208 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:24,807 services 26700 18208 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:25,032 services 26700 18208 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:25,061 views 26700 18208 Signed document fd88a9c7-3e8d-41b1-bcb1-5fd27e61bf86 created successfully
+INFO 2026-01-16 12:32:25,943 views 26700 18208 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:25,944 services 26700 18208 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:25,946 services 26700 18208 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:26,180 services 26700 18208 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:26,203 views 26700 18208 Signed document 224a5438-80b8-40df-ae77-afc921db0f73 created successfully
+INFO 2026-01-16 12:32:27,297 views 26700 18208 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:27,297 services 26700 18208 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:27,300 services 26700 18208 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:27,515 services 26700 18208 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:27,536 views 26700 18208 Signed document dbdd439a-c624-4b73-b439-8eecf4d412d5 created successfully
+INFO 2026-01-16 12:32:28,348 views 26700 18208 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:28,349 services 26700 18208 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:28,351 services 26700 18208 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:28,622 services 26700 18208 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:28,662 views 26700 18208 Signed document 26fec0f7-8382-43cf-9733-a35dcdfd2eed created successfully
+INFO 2026-01-16 12:32:30,116 views 26700 8544 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:30,117 services 26700 8544 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:30,120 services 26700 8544 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:30,415 services 26700 8544 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:30,435 views 26700 8544 Signed document cdc27dfa-a8aa-42a7-8b38-3ad8a3516fa6 created successfully
+INFO 2026-01-16 12:32:31,359 views 26700 8544 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:31,360 services 26700 8544 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:31,365 services 26700 8544 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:31,664 services 26700 8544 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:31,782 views 26700 8544 Signed document b06145f7-ee76-4dcc-9f02-2f070449daa6 created successfully
+INFO 2026-01-16 12:32:33,363 views 26700 8544 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:33,363 services 26700 8544 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:33,365 services 26700 8544 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:33,554 services 26700 8544 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:33,590 views 26700 8544 Signed document d002ed0b-be56-4bb5-90d4-66ecf3b52573 created successfully
+INFO 2026-01-16 12:32:35,691 views 26700 27548 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:35,692 services 26700 27548 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:35,696 services 26700 27548 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:35,909 services 26700 27548 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:35,925 views 26700 27548 Signed document d7912372-89b1-4578-9fc6-3ccf9e4c1e17 created successfully
+INFO 2026-01-16 12:32:37,360 views 26700 27548 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:37,361 services 26700 27548 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:37,363 services 26700 27548 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:37,576 services 26700 27548 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:37,609 views 26700 27548 Signed document 94f17197-4d37-48e4-b824-85ad808fcbd1 created successfully
+INFO 2026-01-16 12:32:39,351 views 26700 27548 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:39,352 services 26700 27548 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:39,355 services 26700 27548 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:39,562 services 26700 27548 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:39,581 views 26700 27548 Signed document d572ede4-dfc6-4988-a090-edf79520689a created successfully
+INFO 2026-01-16 12:32:41,362 views 26700 10436 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:41,363 services 26700 10436 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:41,365 services 26700 10436 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:41,583 services 26700 10436 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:41,603 views 26700 10436 Signed document 81340ea5-ae7a-4ad7-a528-db1a5dd3f4c1 created successfully
+INFO 2026-01-16 12:32:43,343 views 26700 10436 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:43,344 services 26700 10436 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:43,346 services 26700 10436 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:43,631 services 26700 10436 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:43,670 views 26700 10436 Signed document 19a903be-b673-4c16-886d-cd6881df2992 created successfully
+INFO 2026-01-16 12:32:45,780 views 26700 22716 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:45,781 services 26700 22716 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:45,784 services 26700 22716 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:46,036 services 26700 22716 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:46,068 views 26700 22716 Signed document d0f8c8c2-fc8b-4886-9eac-1dd1ba797129 created successfully
+INFO 2026-01-16 12:32:48,341 views 26700 22716 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:48,342 services 26700 22716 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:48,344 services 26700 22716 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:48,540 services 26700 22716 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:48,559 views 26700 22716 Signed document 08aa9013-f152-4ace-a5cb-5d6015d83bc5 created successfully
+INFO 2026-01-16 12:32:50,650 views 26700 27900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:50,651 services 26700 27900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:50,653 services 26700 27900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:50,860 services 26700 27900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:50,879 views 26700 27900 Signed document 965ba34c-1a77-4980-b459-986f8da0a492 created successfully
+INFO 2026-01-16 12:32:52,359 views 26700 27900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:52,360 services 26700 27900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:52,362 services 26700 27900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:52,557 services 26700 27900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:52,583 views 26700 27900 Signed document 642e5abf-f0a3-4eb3-b23b-3711bf98f9c8 created successfully
+INFO 2026-01-16 12:32:54,472 views 26700 27900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:54,472 services 26700 27900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:54,474 services 26700 27900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:54,692 services 26700 27900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:54,718 views 26700 27900 Signed document c9f01b77-b177-4bd5-a9ec-5ca0907c947f created successfully
+INFO 2026-01-16 12:32:56,348 views 26700 27900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:56,349 services 26700 27900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:56,351 services 26700 27900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:56,624 services 26700 27900 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:32:56,656 views 26700 27900 Signed document ae0c0a5b-852a-4717-b13f-b75778657b5b created successfully
+INFO 2026-01-16 12:32:58,420 views 26700 27900 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:32:58,420 services 26700 27900 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:32:58,422 services 26700 27900 Opened PDF with 6 pages
+INFO 2026-01-16 12:32:58,620 services 26700 27900 PDF signing completed successfully, output size: 1207860 bytes
+INFO 2026-01-16 12:32:58,653 views 26700 27900 Signed document b01ae07e-be20-41e1-8119-5e357dc14426 created successfully
+INFO 2026-01-16 12:33:00,695 views 26700 27668 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:00,696 services 26700 27668 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:00,698 services 26700 27668 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:00,970 services 26700 27668 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:00,993 views 26700 27668 Signed document 9bfd5414-d9fb-4ab2-9f5d-489efce835a2 created successfully
+INFO 2026-01-16 12:33:02,345 views 26700 27668 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:02,345 services 26700 27668 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:02,348 services 26700 27668 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:02,543 services 26700 27668 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:02,574 views 26700 27668 Signed document 61a4812a-13b0-4107-b07f-17695a530620 created successfully
+INFO 2026-01-16 12:33:04,361 views 26700 27668 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:04,362 services 26700 27668 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:04,364 services 26700 27668 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:04,562 services 26700 27668 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:04,592 views 26700 27668 Signed document 6c7d1b8f-ce94-4664-8ad2-921654c7468a created successfully
+INFO 2026-01-16 12:33:08,369 views 26700 24860 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:08,370 services 26700 24860 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:08,372 services 26700 24860 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:08,580 services 26700 24860 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:08,607 views 26700 24860 Signed document 8d66b5a4-5408-49f0-8c49-be307f4f48b4 created successfully
+INFO 2026-01-16 12:33:10,731 views 26700 20084 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:10,732 services 26700 20084 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:10,735 services 26700 20084 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:10,951 services 26700 20084 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:10,974 views 26700 20084 Signed document 7a817f29-f6f4-4136-8d53-a1d53f02996b created successfully
+INFO 2026-01-16 12:33:12,345 views 26700 20084 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:12,346 services 26700 20084 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:12,348 services 26700 20084 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:12,581 services 26700 20084 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:12,621 views 26700 20084 Signed document 6cfb5554-f11e-4685-ac88-8d6757956aa5 created successfully
+INFO 2026-01-16 12:33:14,340 views 26700 20084 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:14,341 services 26700 20084 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:14,343 services 26700 20084 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:14,538 services 26700 20084 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:14,557 views 26700 20084 Signed document 24f97f0e-acc1-4a05-b0a8-3e7670525eb8 created successfully
+INFO 2026-01-16 12:33:16,651 views 26700 28112 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:16,652 services 26700 28112 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:16,654 services 26700 28112 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:16,932 services 26700 28112 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:16,955 views 26700 28112 Signed document db400239-d668-4953-8785-5c2c03d9a24d created successfully
+INFO 2026-01-16 12:33:18,583 views 26700 28112 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:18,584 services 26700 28112 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:18,586 services 26700 28112 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:18,798 services 26700 28112 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:18,828 views 26700 28112 Signed document 26f9e0ab-8c71-4e47-8f5e-3556eecaac62 created successfully
+INFO 2026-01-16 12:33:22,775 views 26700 21192 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:22,776 services 26700 21192 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:22,780 services 26700 21192 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:23,195 services 26700 21192 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:23,268 views 26700 21192 Signed document e17224eb-ddb9-4c8d-abbf-d07740a54956 created successfully
+INFO 2026-01-16 12:33:25,369 views 26700 21192 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:25,369 services 26700 21192 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:25,372 services 26700 21192 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:25,645 services 26700 21192 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:25,686 views 26700 21192 Signed document 0ccfd539-db41-44e1-b6d4-6b7cf7dad4eb created successfully
+INFO 2026-01-16 12:33:28,608 views 26700 21192 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:28,609 services 26700 21192 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:28,611 services 26700 21192 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:28,816 services 26700 21192 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:28,839 views 26700 21192 Signed document 9f1f8bc4-df4e-4e4d-956f-852e110cbe1f created successfully
+INFO 2026-01-16 12:33:30,654 views 26700 20680 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:30,655 services 26700 20680 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:30,658 services 26700 20680 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:30,889 services 26700 20680 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:30,915 views 26700 20680 Signed document 6a4601f7-d31c-4b54-9cab-60069699915b created successfully
+INFO 2026-01-16 12:33:33,357 views 26700 20680 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:33,358 services 26700 20680 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:33,360 services 26700 20680 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:33,621 services 26700 20680 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:33,644 views 26700 20680 Signed document c3227525-c1de-4b7c-856d-1a4ebcae51e4 created successfully
+INFO 2026-01-16 12:33:35,636 views 26700 20680 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:35,637 services 26700 20680 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:35,639 services 26700 20680 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:35,878 services 26700 20680 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:35,908 views 26700 20680 Signed document 42f7ed5f-08e5-4197-ab43-9101ca76445b created successfully
+INFO 2026-01-16 12:33:38,355 views 26700 20680 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:38,356 services 26700 20680 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:38,358 services 26700 20680 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:38,576 services 26700 20680 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:38,600 views 26700 20680 Signed document 468d5a73-711d-4c36-ab24-11a2fe367b23 created successfully
+INFO 2026-01-16 12:33:40,418 views 26700 20680 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:40,418 services 26700 20680 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:40,421 services 26700 20680 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:40,640 services 26700 20680 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:40,665 views 26700 20680 Signed document 8ded1b49-27e0-40a3-8df1-6d67d388f11a created successfully
+INFO 2026-01-16 12:33:42,351 views 26700 20680 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:42,352 services 26700 20680 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:42,356 services 26700 20680 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:42,615 services 26700 20680 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:42,651 views 26700 20680 Signed document 9d4b387d-89e7-4cee-b118-cfa393e512ed created successfully
+INFO 2026-01-16 12:33:44,380 views 26700 20680 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:44,382 services 26700 20680 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:44,384 services 26700 20680 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:44,577 services 26700 20680 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:44,599 views 26700 20680 Signed document 3c9956e0-1d83-492e-8531-d669351b8155 created successfully
+INFO 2026-01-16 12:33:48,397 views 26700 16812 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:48,398 services 26700 16812 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:48,400 services 26700 16812 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:48,675 services 26700 16812 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:48,693 views 26700 16812 Signed document f9be0740-1667-4a3a-b5fd-3fae748adc37 created successfully
+INFO 2026-01-16 12:33:51,341 views 26700 16812 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:51,342 services 26700 16812 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:51,344 services 26700 16812 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:51,530 services 26700 16812 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:51,547 views 26700 16812 Signed document c428cc8d-8502-4d57-9528-c8c6de7b23de created successfully
+INFO 2026-01-16 12:33:53,377 views 26700 16812 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:53,378 services 26700 16812 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:53,380 services 26700 16812 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:53,581 services 26700 16812 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:53,603 views 26700 16812 Signed document 4d665c69-7080-4e76-8605-68f0d707eba3 created successfully
+INFO 2026-01-16 12:33:55,660 views 26700 28156 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:55,661 services 26700 28156 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:55,664 services 26700 28156 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:55,867 services 26700 28156 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:55,890 views 26700 28156 Signed document 94678df8-a2d0-4244-bccd-c02f86aa231b created successfully
+INFO 2026-01-16 12:33:57,366 views 26700 28156 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:57,366 services 26700 28156 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:57,368 services 26700 28156 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:57,566 services 26700 28156 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:57,587 views 26700 28156 Signed document dd8c7ee9-5658-4307-9267-dbb7c6cc493c created successfully
+INFO 2026-01-16 12:33:59,571 views 26700 28156 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:33:59,572 services 26700 28156 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:33:59,574 services 26700 28156 Opened PDF with 6 pages
+INFO 2026-01-16 12:33:59,781 services 26700 28156 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:33:59,800 views 26700 28156 Signed document b0ee8dd8-6f7d-4652-81bf-6524b7ca27b6 created successfully
+INFO 2026-01-16 12:34:01,358 views 26700 28156 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:34:01,358 services 26700 28156 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:34:01,360 services 26700 28156 Opened PDF with 6 pages
+INFO 2026-01-16 12:34:01,566 services 26700 28156 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:34:01,586 views 26700 28156 Signed document e4154c93-967f-40c2-8a0a-39042517404f created successfully
+INFO 2026-01-16 12:34:05,037 views 26700 28156 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:34:05,042 services 26700 28156 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:34:05,101 services 26700 28156 Opened PDF with 6 pages
+INFO 2026-01-16 12:34:06,218 services 26700 28156 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:34:06,263 views 26700 28156 Signed document 79539a71-74b4-4e2b-b1b6-6bdb617b933b created successfully
+INFO 2026-01-16 12:34:08,637 views 26700 28156 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:34:08,637 services 26700 28156 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:34:08,639 services 26700 28156 Opened PDF with 6 pages
+INFO 2026-01-16 12:34:08,886 services 26700 28156 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:34:08,960 views 26700 28156 Signed document b72b1c34-8f79-4d6e-b6d9-fa5e4e3f15cc created successfully
+INFO 2026-01-16 12:34:10,211 views 26700 28156 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:34:10,216 services 26700 28156 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:34:10,219 services 26700 28156 Opened PDF with 6 pages
+INFO 2026-01-16 12:34:10,547 services 26700 28156 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:34:10,586 views 26700 28156 Signed document ee25408b-1e56-4593-9af3-a791eef39be9 created successfully
+INFO 2026-01-16 12:34:11,770 views 26700 28156 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:34:11,771 services 26700 28156 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:34:11,774 services 26700 28156 Opened PDF with 6 pages
+INFO 2026-01-16 12:34:11,956 services 26700 28156 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:34:11,976 views 26700 28156 Signed document 30b68ecb-077b-4e7a-9388-6f055ce24a35 created successfully
+INFO 2026-01-16 12:34:12,933 views 26700 28156 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:34:12,935 services 26700 28156 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:34:12,938 services 26700 28156 Opened PDF with 6 pages
+INFO 2026-01-16 12:34:13,277 services 26700 28156 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:34:13,312 views 26700 28156 Signed document 01670fdb-f239-4bf3-b678-8cbb7d07135f created successfully
+INFO 2026-01-16 12:34:14,314 views 26700 28156 Starting PDF signing for document 4e88c920-d2eb-49e7-8fc5-6b01c4d25749 with signature aba6a55e-b47e-4774-97cf-c61bb74d5c28
+INFO 2026-01-16 12:34:14,314 services 26700 28156 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_niDjRzd.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_I6bHUVK.jpg
+INFO 2026-01-16 12:34:14,317 services 26700 28156 Opened PDF with 6 pages
+INFO 2026-01-16 12:34:14,524 services 26700 28156 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:34:14,550 views 26700 28156 Signed document be4bd116-a17a-4bc4-997e-9e44f7cd5c06 created successfully
+INFO 2026-01-16 12:41:57,063 views 26700 29152 Processing document upload: dev-example.pdf
+INFO 2026-01-16 12:41:57,094 views 26700 29152 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-16 12:41:57,094 views 26700 29152 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-16 12:41:57,115 views 26700 29152 Document 50aaca30-6d3b-42ca-8449-91ee5e368203 saved successfully
+INFO 2026-01-16 12:42:04,299 views 26700 29152 Processing signature upload: sign.jpg
+INFO 2026-01-16 12:42:04,319 views 26700 29152 Signature 0b7cb333-9568-4d3a-8629-8df93067a3b4 saved successfully
+INFO 2026-01-16 12:42:05,472 views 26700 29152 Starting PDF signing for document 50aaca30-6d3b-42ca-8449-91ee5e368203 with signature 0b7cb333-9568-4d3a-8629-8df93067a3b4
+INFO 2026-01-16 12:42:05,472 services 26700 29152 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_NiRwWWF.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_2LF5Xyf.jpg
+INFO 2026-01-16 12:42:05,513 services 26700 29152 Opened PDF with 6 pages
+INFO 2026-01-16 12:42:05,754 services 26700 29152 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 12:42:05,768 views 26700 29152 Signed document c6eb77d0-6b61-4f6d-b36b-4eefdd69d0eb created successfully
+INFO 2026-01-16 13:39:56,579 views 26700 27828 Processing document upload: dev-example.pdf
+INFO 2026-01-16 13:39:56,618 views 26700 27828 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-16 13:39:56,618 views 26700 27828 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-16 13:39:56,677 views 26700 27828 Document 5a5a5622-b032-4734-87da-5c6b7af28b37 saved successfully
+INFO 2026-01-16 13:40:05,417 views 26700 27828 Processing signature upload: sign.jpg
+INFO 2026-01-16 13:40:05,442 views 26700 27828 Signature c9a19f14-5f95-4ff5-92be-ac61bcbf9b8b saved successfully
+INFO 2026-01-16 13:40:38,483 views 26700 27828 Starting PDF signing for document 5a5a5622-b032-4734-87da-5c6b7af28b37 with signature c9a19f14-5f95-4ff5-92be-ac61bcbf9b8b
+INFO 2026-01-16 13:40:38,485 services 26700 27828 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_2AigjfP.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_HXhLZic.jpg
+INFO 2026-01-16 13:40:38,596 services 26700 27828 Opened PDF with 6 pages
+INFO 2026-01-16 13:40:38,859 services 26700 27828 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 13:40:38,884 views 26700 27828 Signed document 3380e24b-a13f-456b-b818-7e10956b98be created successfully
+INFO 2026-01-16 13:41:01,669 views 26700 14536 Starting PDF signing for document 5a5a5622-b032-4734-87da-5c6b7af28b37 with signature c9a19f14-5f95-4ff5-92be-ac61bcbf9b8b
+INFO 2026-01-16 13:41:01,670 services 26700 14536 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_2AigjfP.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_HXhLZic.jpg
+INFO 2026-01-16 13:41:01,672 services 26700 14536 Opened PDF with 6 pages
+INFO 2026-01-16 13:41:01,837 services 26700 14536 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-16 13:41:01,857 views 26700 14536 Signed document 85bf4328-5489-4f19-8a11-c691e0cb7ed6 created successfully
+INFO 2026-01-16 14:01:19,409 views 26700 22988 Processing document upload: dev-example.pdf
+INFO 2026-01-16 14:01:19,456 views 26700 22988 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-16 14:01:19,456 views 26700 22988 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-16 14:01:19,524 views 26700 22988 Document a98fd0ba-29eb-4dd0-a79a-ec70359e6ac4 saved successfully
+INFO 2026-01-16 14:01:33,071 views 26700 404 Processing signature upload: sign.jpg
+INFO 2026-01-16 14:01:33,092 views 26700 404 Signature 7ea88519-30a0-44a8-90ae-43f682bbc467 saved successfully
+INFO 2026-01-17 11:16:02,897 autoreload 11316 13628 Watching for file changes with StatReloader
