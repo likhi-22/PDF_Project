@@ -1,6 +1,7 @@
 import { useRef } from 'react'
 import ApplicationSection from './components/sections/ApplicationSection'
-import { ThemeToggle } from "./components/ui/ThemeToggle"
+import AnimatedBackground from './components/AnimatedBackground'
+import Footer from './components/Footer'
 function App() {
   const appSectionRef = useRef<HTMLDivElement | null>(null)
 
@@ -19,7 +20,7 @@ function App() {
       <div className="relative overflow-hidden">
         {/* Background Gradients */}
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_#e2e8f0_0,_#f8fafc_55%)] dark:bg-[radial-gradient(circle_at_top,_#1f2937_0,_#020617_55%)] opacity-80 transition-all duration-300" />
-        
+        <AnimatedBackground />
         <div className="relative z-10 flex min-h-screen flex-col">
           <header className="border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-slate-950/80 backdrop-blur transition-colors duration-300">
             <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:h-20 sm:px-6 lg:px-8">
@@ -38,7 +39,6 @@ function App() {
               </button>
 
               <div className="flex items-center gap-3">
-                <ThemeToggle />
                 <button
                   onClick={handleScrollToApp}
                   className="inline-flex items-center rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white dark:text-slate-950 shadow-[0_0_35px_rgba(56,189,248,0.5)] dark:shadow-[0_0_35px_rgba(56,189,248,0.7)] transition hover:bg-sky-400 sm:px-5 sm:text-sm"
@@ -84,6 +84,7 @@ function App() {
               <ApplicationSection sectionRef={appSectionRef} />
             </section>
           </main>
+          <Footer />
         </div>
       </div>
     </div>

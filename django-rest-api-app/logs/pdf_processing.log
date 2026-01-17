@@ -671,3 +671,61 @@ INFO 2026-01-16 14:01:33,071 views 26700 404 Processing signature upload: sign.j
 INFO 2026-01-16 14:01:33,092 views 26700 404 Signature 7ea88519-30a0-44a8-90ae-43f682bbc467 saved successfully
 INFO 2026-01-17 11:16:02,897 autoreload 11316 13628 Watching for file changes with StatReloader
 WARNING 2026-01-17 11:16:10,171 log 11316 12676 Not Found: /favicon.ico
+INFO 2026-01-17 11:21:46,417 views 11316 9984 Processing document upload: dev-example.pdf
+INFO 2026-01-17 11:21:46,444 views 11316 9984 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-17 11:21:46,445 views 11316 9984 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-17 11:21:46,475 views 11316 9984 Document c90d4cd3-887b-471f-8404-39cc0e73dd6c saved successfully
+INFO 2026-01-17 11:21:53,586 views 11316 9984 Processing signature upload: sign.jpg
+INFO 2026-01-17 11:21:53,609 views 11316 9984 Signature b9e3c694-cb71-4612-bf6c-6241efba9660 saved successfully
+INFO 2026-01-17 11:22:42,826 views 11316 25344 Processing document upload: dev-example.pdf
+INFO 2026-01-17 11:22:42,854 views 11316 25344 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-17 11:22:42,855 views 11316 25344 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-17 11:22:42,912 views 11316 25344 Document 09f216da-6f4e-4ad8-bce8-0b11c05b00b3 saved successfully
+INFO 2026-01-17 11:22:51,841 views 11316 1772 Processing signature upload: sign.jpg
+INFO 2026-01-17 11:22:51,857 views 11316 1772 Signature 825a4744-2d7b-4144-907b-e801bdd73351 saved successfully
+INFO 2026-01-17 11:33:27,065 autoreload 11316 13628 C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\api\views.py changed, reloading.
+INFO 2026-01-17 11:33:29,611 autoreload 25580 11600 Watching for file changes with StatReloader
+INFO 2026-01-17 11:33:33,970 autoreload 25580 11600 C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\api\urls.py changed, reloading.
+INFO 2026-01-17 11:33:36,359 autoreload 4300 3464 Watching for file changes with StatReloader
+INFO 2026-01-17 11:46:09,939 views 4300 24388 Processing document upload: dev-example.pdf
+INFO 2026-01-17 11:46:09,989 views 4300 24388 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-17 11:46:09,989 views 4300 24388 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-17 11:46:10,056 views 4300 24388 Document c63dac32-105e-434a-a129-05052b51d592 saved successfully
+INFO 2026-01-17 11:46:16,420 views 4300 10480 Processing signature upload: sign.jpg
+INFO 2026-01-17 11:46:16,443 views 4300 10480 Signature 1af141aa-a631-425c-8d0a-4650db9670bf saved successfully
+INFO 2026-01-17 11:46:22,749 views 4300 10480 Starting PDF signing for document c63dac32-105e-434a-a129-05052b51d592 with signature 1af141aa-a631-425c-8d0a-4650db9670bf
+INFO 2026-01-17 11:46:22,750 services 4300 10480 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_2Xc39f1.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_TyuYETa.jpg
+INFO 2026-01-17 11:46:22,864 services 4300 10480 Opened PDF with 6 pages
+INFO 2026-01-17 11:46:23,163 services 4300 10480 PDF signing completed successfully, output size: 1207863 bytes
+INFO 2026-01-17 11:46:23,180 views 4300 10480 Signed document 5d172fb1-7db7-4417-bf85-1cb2022f6eaf created successfully
+INFO 2026-01-17 12:21:58,834 views 4300 17576 Processing document upload: dev-example.pdf
+INFO 2026-01-17 12:21:58,879 views 4300 17576 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-17 12:21:58,879 views 4300 17576 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-17 12:21:58,932 views 4300 17576 Document cb36d91f-b48a-4d78-9639-90bd06a45490 saved successfully
+INFO 2026-01-17 12:22:05,429 views 4300 21328 Processing signature upload: sign.jpg
+INFO 2026-01-17 12:22:05,453 views 4300 21328 Signature e8434258-ef12-4a8d-8d2f-7be2eb8ae85b saved successfully
+INFO 2026-01-17 12:22:29,179 views 4300 25216 Starting PDF signing for document cb36d91f-b48a-4d78-9639-90bd06a45490 with signature e8434258-ef12-4a8d-8d2f-7be2eb8ae85b
+INFO 2026-01-17 12:22:29,182 services 4300 25216 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_GX7kEL7.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_lWEjvVa.jpg
+INFO 2026-01-17 12:22:29,301 services 4300 25216 Opened PDF with 6 pages
+INFO 2026-01-17 12:22:29,666 services 4300 25216 PDF signing completed successfully, output size: 1207899 bytes
+INFO 2026-01-17 12:22:29,691 views 4300 25216 Signed document beeb9822-6974-4b78-8b81-f788f8b6e8ee created successfully
+WARNING 2026-01-17 12:22:57,033 log 4300 14556 Not Found: /media/signed_documents/signed_5a5a5622-b032-4734-87da-5c6b7af28b37_hUyL4XJ.pdf
+WARNING 2026-01-17 12:23:05,891 log 4300 24936 Not Found: /media/signed_documents/signed_4e88c920-d2eb-49e7-8fc5-6b01c4d25749_b5Km79a.pdf
+INFO 2026-01-17 13:22:15,873 views 4300 21820 Processing document upload: dev-example.pdf
+INFO 2026-01-17 13:22:15,902 views 4300 21820 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-17 13:22:15,902 views 4300 21820 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-17 13:22:15,965 views 4300 21820 Document d6c9a886-5d65-4b76-a9a9-9632c71c5f94 saved successfully
+INFO 2026-01-17 13:22:23,363 views 4300 21820 Processing signature upload: sign.jpg
+INFO 2026-01-17 13:22:23,381 views 4300 21820 Signature cf860300-c16c-4c3f-a60d-3cd3ea15d6ee saved successfully
+INFO 2026-01-17 13:22:48,272 views 4300 21820 Processing document upload: dev-example.pdf
+INFO 2026-01-17 13:22:48,295 views 4300 21820 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-17 13:22:48,295 views 4300 21820 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-17 13:22:48,317 views 4300 21820 Document b9711d45-b756-40ac-8b1c-fd2007f3ecfd saved successfully
+INFO 2026-01-17 13:22:54,286 views 4300 21820 Processing signature upload: sign.jpg
+INFO 2026-01-17 13:22:54,311 views 4300 21820 Signature 5aea1eb3-176f-4026-94c0-2a01c5b62c79 saved successfully
+INFO 2026-01-17 13:23:27,440 views 4300 21820 Processing document upload: dev-example.pdf
+INFO 2026-01-17 13:23:27,453 views 4300 21820 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-17 13:23:27,454 views 4300 21820 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-17 13:23:27,479 views 4300 21820 Document 7962bdec-41bb-4305-a984-9b05be04ace9 saved successfully
+INFO 2026-01-17 13:28:45,461 views 4300 14348 Processing signature upload: sign.jpg
+INFO 2026-01-17 13:28:45,603 views 4300 14348 Signature a50a768a-ebc6-4c71-aa6e-7b88bcdf2fdc saved successfully

@@ -263,6 +263,10 @@ class ApiService {
     return response.data
   }
 
+  async deleteSignedDocument(id: string): Promise<void> {
+    await api.delete(`/signed-pdf/${id}/`)
+  }
+
   /**
    * Get full URL for media file
    * Handles both absolute URLs and relative paths from Django

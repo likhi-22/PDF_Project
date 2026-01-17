@@ -8,5 +8,6 @@ router.register(r'signatures', views.SignatureViewSet)
 router.register(r'signed-documents', views.SignedDocumentViewSet)
 
 urlpatterns = [
+    path('signed-pdf/<uuid:pk>/', views.SignedPDFDeleteView.as_view(), name='signed-pdf-delete'),
     path('', include(router.urls)),
 ]

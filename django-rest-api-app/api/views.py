@@ -1,4 +1,5 @@
 from rest_framework import viewsets, status
+from rest_framework.views import APIView
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.exceptions import ValidationError
@@ -10,6 +11,7 @@ from .services import PDFSigningService
 from pypdf import PdfReader
 from django.core.files.base import ContentFile
 import logging
+import os
 
 logger = logging.getLogger('api.views')
 
@@ -95,3 +97,21 @@ class SignedDocumentViewSet(viewsets.ModelViewSet):
         response = FileResponse(file_handle, content_type='application/pdf')
         response['Content-Disposition'] = f'attachment; filename="signed_{instance.id}.pdf"'
         return response
+
+
+class SignedPDFDeleteView(APIView):
+    def delete(self, request, pk):
+        try:
+            signed_document = SignedDocument.objects.get(pk=pk)
+        except SignedDocument.DoesNotExist:
+            return Response(status=status.HTTP_404_NOT_FOUND)
+
+        file_path = signed_document.get_file_path()
+        if file_path and os.path.exists(file_path):
+            try:
+                os.remove(file_path)
+            except OSError:
+                pass
+
+        signed_document.delete()
+        return Response(status=status.HTTP_204_NO_CONTENT)

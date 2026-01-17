@@ -13,6 +13,7 @@ function PDFSigner() {
   const [uploadedPdf, setUploadedPdf] = useState<File | null>(null)
   const [uploadedSignature, setUploadedSignature] = useState<File | null>(null)
   const [signedPdfUrl, setSignedPdfUrl] = useState<string | null>(null)
+  const [signedDocumentId, setSignedDocumentId] = useState<string | null>(null)
   const [signingProgress, setSigningProgress] = useState(0)
   const [error, setError] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
@@ -71,6 +72,7 @@ function PDFSigner() {
       setSigningProgress(60)
       const signedDoc = await apiService.signPDF(pdfDoc.id, sigDoc.id)
       setSigningProgress(80)
+      setSignedDocumentId(signedDoc.id)
 
       // 4. Download Signed PDF for preview/download button
       const blob = await apiService.downloadSignedDocumentBlob(signedDoc.id)
@@ -108,10 +110,35 @@ function PDFSigner() {
     setUploadedPdf(null)
     setUploadedSignature(null)
     setSignedPdfUrl(null)
+    setSignedDocumentId(null)
     setSigningProgress(0)
     setError(null)
     setIsLoading(false)
     showInfo('Started fresh signing session')
+  }
+
+  const handleDeleteSignedPdf = async () => {
+    if (!signedDocumentId) {
+      return
+    }
+
+    const confirmed = window.confirm('Are you sure?')
+    if (!confirmed) {
+      return
+    }
+
+    try {
+      await apiService.deleteSignedDocument(signedDocumentId)
+      if (signedPdfUrl) {
+        URL.revokeObjectURL(signedPdfUrl)
+      }
+      resetFlow()
+      showSuccess('Signed PDF deleted successfully.')
+    } catch (err: any) {
+      const errorMsg = err.message || 'Failed to delete signed PDF. Please try again.'
+      setError(errorMsg)
+      showError(errorMsg)
+    }
   }
 
   const getStepIndicator = (step: Step, stepNumber: number) => {
@@ -368,6 +395,17 @@ function PDFSigner() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                     Download Signed PDF
+                  </button>
+                  <button
+                    onClick={handleDeleteSignedPdf}
+                    disabled={!signedDocumentId}
+                    className="px-6 py-3 border border-red-300 dark:border-red-600 rounded-lg text-red-700 dark:text-red-300 hover:bg-red-50 dark:hover:bg-red-900/30 transition-all duration-200 ease-in-out hover:shadow-md focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 flex items-center disabled:opacity-50 disabled:cursor-not-allowed"
+                    aria-label="Delete the signed PDF document"
+                  >
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 7h12M9 7V5a3 3 0 013-3h0a3 3 0 013 3v2m-7 0h8m-9 2h10l-1 11H8L7 9z" />
+                    </svg>
+                    Delete Signed PDF
                   </button>
                   <button
                     onClick={resetFlow}

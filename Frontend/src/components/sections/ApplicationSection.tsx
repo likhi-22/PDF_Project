@@ -6,7 +6,7 @@ import PDFPreview from '../PDFPreview'
 import Button from '../ui/Button'
 import Card from '../ui/Card'
 import { useToast } from '../ToastProvider'
-import { ApiError } from '../../services/api'
+import { apiService, ApiError } from '../../services/api'
 import { PDFDocument } from 'pdf-lib'
 
 type Step = 'upload' | 'signature' | 'preview' | 'signing' | 'complete'
@@ -22,6 +22,7 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
   const [documentId, setDocumentId] = useState<string | null>(null)
   const [signatureId, setSignatureId] = useState<string | null>(null)
   const [signedPdfUrl, setSignedPdfUrl] = useState<string | null>(null)
+  const [signedDocumentId, setSignedDocumentId] = useState<string | null>(null)
   const [signedBlob, setSignedBlob] = useState<Blob | null>(null)
   const [signingProgress, setSigningProgress] = useState(0)
   const [error, setError] = useState<string | null>(null)
@@ -64,6 +65,7 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
     setError(null)
     setSignedPdfUrl(null)
     setSignedBlob(null)
+    setSignedDocumentId(null)
     setHasSignedOnce(false)
   }, [])
 
@@ -77,6 +79,7 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
     setPlacementMode(true)
     setSignedPdfUrl(null)
     setSignedBlob(null)
+    setSignedDocumentId(null)
     setHasSignedOnce(false)
     if (signaturePreviewUrl) {
       window.URL.revokeObjectURL(signaturePreviewUrl)
@@ -219,6 +222,14 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
       const pdfUrl = window.URL.createObjectURL(blob)
       setSignedBlob(blob)
       setSignedPdfUrl(pdfUrl)
+
+      try {
+        const signedDoc = await apiService.signPDF(documentId, signatureId, signaturePosition || undefined)
+        setSignedDocumentId(signedDoc.id)
+      } catch (apiErr) {
+        console.error(apiErr)
+      }
+
       setSigningProgress(100)
 
       dismiss(loadingToastId)
@@ -234,7 +245,7 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
     } finally {
       setIsSigning(false)
     }
-  }, [documentId, signatureId, uploadedSignature, uploadedPdf, showSuccess, showError, showLoading, dismiss, hasSignedOnce, currentSignatureBox])
+  }, [documentId, signatureId, uploadedSignature, uploadedPdf, showSuccess, showError, showLoading, dismiss, hasSignedOnce, currentSignatureBox, signaturePosition])
 
   const handleStampPdf = useCallback(() => {
     if (!documentId || !signatureId || !uploadedSignature || !currentSignatureBox || isSigning || hasSignedOnce) {
@@ -272,6 +283,50 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
       showError(apiError.message || 'Failed to download signed PDF. Please try again.')
     }
   }, [signedBlob, uploadedPdf, showSuccess, showError, showLoading, dismiss])
+
+  const handleDeleteSignedPdf = useCallback(async () => {
+    if (!signedDocumentId) {
+      return
+    }
+
+    const confirmed = window.confirm('Are you sure?')
+    if (!confirmed) {
+      return
+    }
+
+    const loadingToastId = showLoading('Deleting signed PDF...')
+    try {
+      await apiService.deleteSignedDocument(signedDocumentId)
+
+      if (signedPdfUrl) {
+        window.URL.revokeObjectURL(signedPdfUrl)
+      }
+      if (signaturePreviewUrl) {
+        window.URL.revokeObjectURL(signaturePreviewUrl)
+      }
+
+      setSignedPdfUrl(null)
+      setSignedBlob(null)
+      setSignedDocumentId(null)
+      setUploadedPdf(null)
+      setUploadedSignature(null)
+      setDocumentId(null)
+      setSignatureId(null)
+      setSignaturePosition(null)
+      setSignatureBoxState({ history: [], index: -1 })
+      setZoom(1)
+      setCurrentStep('upload')
+      setError(null)
+      setHasSignedOnce(false)
+
+      dismiss(loadingToastId)
+      showSuccess('Signed PDF deleted successfully.')
+    } catch (err) {
+      dismiss(loadingToastId)
+      const apiError = err as ApiError
+      showError(apiError.message || 'Failed to delete signed PDF. Please try again.')
+    }
+  }, [signedDocumentId, signedPdfUrl, signaturePreviewUrl, showLoading, dismiss, showSuccess, showError])
 
   // Removed resetFlow (unused)
 
@@ -380,7 +435,7 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
               </h2>
             </div>
           </motion.div>
-          <p className="mx-auto max-w-2xl text-sm text-slate-300 sm:text-base">
+          <p className="mx-auto max-w-2xl text-sm text-slate-200 sm:text-base">
             Upload your PDF and signature image, choose a position once, and apply it automatically to every page before downloading the final signed document.
           </p>
         </motion.div>
@@ -410,7 +465,7 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
             <Card variant="elevated" padding="lg" className="w-full">
               <div className="mb-4">
                 <h3 className="text-lg font-semibold text-slate-50">Step 1 · Upload PDF</h3>
-                <p className="text-sm text-slate-300">Choose your PDF document to start the signing workflow.</p>
+                <p className="text-sm text-slate-200">Choose your PDF document to start the signing workflow.</p>
               </div>
               <PDFUpload onFileUpload={handlePdfUpload} />
             </Card>
@@ -423,7 +478,7 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
             <Card variant="elevated" padding="lg" className="w-full">
               <div className="mb-4">
                 <h3 className="text-lg font-semibold text-slate-50">Step 2 · Upload signature</h3>
-                <p className="text-sm text-slate-300">Add your signature image to apply on the document.</p>
+                <p className="text-sm text-slate-200">Add your signature image to apply on the document.</p>
               </div>
               <SignatureUpload onSignatureUpload={handleSignatureUpload} />
             </Card>
@@ -436,12 +491,12 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
             <Card variant="elevated" padding="lg" className="w-full">
               <div className="mb-4">
                 <h3 className="text-lg font-semibold text-slate-50">Step 3 · Preview</h3>
-                <p className="text-sm text-slate-300">Review pages and pick the signature position on the first page.</p>
+                <p className="text-sm text-slate-200">Review pages and pick the signature position on the first page.</p>
               </div>
               <div className="mb-4 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                 <div className="flex flex-wrap gap-2" />
                 <div className="flex items-center gap-3">
-                  <span className="text-xs font-medium text-slate-300">Zoom</span>
+                  <span className="text-xs font-medium text-slate-200">Zoom</span>
                   <input
                     type="range"
                     min={50}
@@ -490,6 +545,15 @@ const ApplicationSection = ({ sectionRef }: ApplicationSectionProps) => {
                   disabled={!signedPdfUrl}
                 >
                   Download Signed PDF
+                </Button>
+                <Button
+                  variant="danger"
+                  size="md"
+                  onClick={handleDeleteSignedPdf}
+                  aria-label="Delete signed PDF document"
+                  disabled={!signedBlob || !signedDocumentId}
+                >
+                  Delete Signed PDF
                 </Button>
               </div>
             </Card>

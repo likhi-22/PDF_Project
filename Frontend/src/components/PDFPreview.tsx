@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, memo } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Card from './ui/Card'
 import Button from './ui/Button'
+import { useToast } from './ToastProvider'
 import { apiService } from '../services/api'
 import { Document, Page, pdfjs } from 'react-pdf'
 
@@ -47,6 +48,7 @@ const PDFPreview = memo(function PDFPreview({
   signatureBox,
   onSignatureBoxChange,
 }: PDFPreviewProps) {
+  const { showError } = useToast()
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [pdfUrl, setPdfUrl] = useState<string | null>(null)
@@ -104,6 +106,20 @@ const PDFPreview = memo(function PDFPreview({
   }, [file, signedPdfUrl])
 
   useEffect(() => {
+    if (!loading) {
+      return
+    }
+
+    const safetyTimer = setTimeout(() => {
+      setLoading(false)
+    }, 4000)
+
+    return () => {
+      clearTimeout(safetyTimer)
+    }
+  }, [loading])
+
+  useEffect(() => {
     if (!firstPageContainerRef.current) {
       return
     }
@@ -124,8 +140,13 @@ const PDFPreview = memo(function PDFPreview({
     return value
   }
 
-  const handlePageClick = (event: React.MouseEvent<HTMLDivElement>) => {
+  const handlePageClick = (event: React.MouseEvent<HTMLDivElement>, pageIndex: number) => {
     if (!onPositionSelect && !(placementMode && onSignatureBoxChange)) {
+      return
+    }
+
+    if (pageIndex !== 0) {
+      showError('Hey! Signature positioning should be done only on the first page.')
       return
     }
 
@@ -372,7 +393,7 @@ const PDFPreview = memo(function PDFPreview({
                         key={`page_${index + 1}`}
                         ref={isFirstPage ? firstPageContainerRef : undefined}
                         className="relative border border-slate-300 dark:border-secondary-700 rounded-md overflow-hidden bg-gray-50 dark:bg-secondary-900"
-                        onClick={isFirstPage ? handlePageClick : undefined}
+                        onClick={(event) => handlePageClick(event, index)}
                       >
                         <Page
                           pageNumber={index + 1}
