@@ -729,3 +729,4 @@ INFO 2026-01-17 13:23:27,454 views 4300 21820 Document dev-example.pdf size: 707
 INFO 2026-01-17 13:23:27,479 views 4300 21820 Document 7962bdec-41bb-4305-a984-9b05be04ace9 saved successfully
 INFO 2026-01-17 13:28:45,461 views 4300 14348 Processing signature upload: sign.jpg
 INFO 2026-01-17 13:28:45,603 views 4300 14348 Signature a50a768a-ebc6-4c71-aa6e-7b88bcdf2fdc saved successfully
+INFO 2026-01-20 17:06:41,301 autoreload 30648 10480 Watching for file changes with StatReloader
