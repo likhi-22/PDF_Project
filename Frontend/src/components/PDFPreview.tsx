@@ -404,13 +404,15 @@ const PDFPreview = memo(function PDFPreview({
                         />
                         {signatureImageUrl && signatureBox && (
                           <div
-                            className={isFirstPage ? 'absolute cursor-move' : 'absolute pointer-events-none'}
-                            style={{
-                              left: `${signatureBox.x * 100}%`,
-                              top: `${signatureBox.y * 100}%`,
-                              width: `${signatureBox.width * 100}%`,
-                              height: `${signatureBox.height * 100}%`,
-                            }}
+                            className={`${isFirstPage ? 'absolute cursor-move' : 'absolute pointer-events-none'} left-[var(--sig-left)] top-[var(--sig-top)] w-[var(--sig-width)] h-[var(--sig-height)]`}
+                            style={
+                              {
+                                '--sig-left': `${signatureBox.x * 100}%`,
+                                '--sig-top': `${signatureBox.y * 100}%`,
+                                '--sig-width': `${signatureBox.width * 100}%`,
+                                '--sig-height': `${signatureBox.height * 100}%`,
+                              } as React.CSSProperties
+                            }
                             onPointerDown={isFirstPage ? (event) => handleSignaturePointerDown(event, 'move') : undefined}
                             onPointerMove={isFirstPage ? handleSignaturePointerMove : undefined}
                             onPointerUp={isFirstPage ? handleSignaturePointerUp : undefined}

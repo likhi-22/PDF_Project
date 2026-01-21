@@ -730,3 +730,15 @@ INFO 2026-01-17 13:23:27,479 views 4300 21820 Document 7962bdec-41bb-4305-a984-9
 INFO 2026-01-17 13:28:45,461 views 4300 14348 Processing signature upload: sign.jpg
 INFO 2026-01-17 13:28:45,603 views 4300 14348 Signature a50a768a-ebc6-4c71-aa6e-7b88bcdf2fdc saved successfully
 INFO 2026-01-20 17:06:41,301 autoreload 30648 10480 Watching for file changes with StatReloader
+INFO 2026-01-20 17:25:57,931 views 30648 2328 Processing document upload: dev-example.pdf
+INFO 2026-01-20 17:25:58,002 views 30648 2328 Extracted 6 pages from dev-example.pdf
+INFO 2026-01-20 17:25:58,003 views 30648 2328 Document dev-example.pdf size: 707486 bytes
+INFO 2026-01-20 17:25:58,101 views 30648 2328 Document 2dbb7a2b-7d34-4026-aa38-db7b2c740060 saved successfully
+INFO 2026-01-20 17:26:12,035 views 30648 2328 Processing signature upload: sign.jpg
+INFO 2026-01-20 17:26:12,068 views 30648 2328 Signature a7d4db81-b886-4210-aa92-b5d9cd54cae2 saved successfully
+INFO 2026-01-20 17:26:41,102 views 30648 2324 Starting PDF signing for document 2dbb7a2b-7d34-4026-aa38-db7b2c740060 with signature a7d4db81-b886-4210-aa92-b5d9cd54cae2
+INFO 2026-01-20 17:26:41,105 services 30648 2324 Starting PDF signing: PDF=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\documents\dev-example_0m1rszE.pdf, Signature=C:\Users\likhi\OneDrive\Desktop\PDF\PDF_Project\django-rest-api-app\media\signatures\sign_HpLXZNA.jpg
+INFO 2026-01-20 17:26:41,275 services 30648 2324 Opened PDF with 6 pages
+INFO 2026-01-20 17:26:41,700 services 30648 2324 PDF signing completed successfully, output size: 1207857 bytes
+INFO 2026-01-20 17:26:41,731 views 30648 2324 Signed document 76b86888-74fc-4e5f-b8c5-68a0673916c4 created successfully
+INFO 2026-01-21 12:08:00,000 autoreload 26796 30352 Watching for file changes with StatReloader
