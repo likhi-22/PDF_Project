@@ -742,3 +742,4 @@ INFO 2026-01-20 17:26:41,275 services 30648 2324 Opened PDF with 6 pages
 INFO 2026-01-20 17:26:41,700 services 30648 2324 PDF signing completed successfully, output size: 1207857 bytes
 INFO 2026-01-20 17:26:41,731 views 30648 2324 Signed document 76b86888-74fc-4e5f-b8c5-68a0673916c4 created successfully
 INFO 2026-01-21 12:08:00,000 autoreload 26796 30352 Watching for file changes with StatReloader
+WARNING 2026-01-21 12:09:33,477 log 26796 5352 Not Found: /favicon.ico
